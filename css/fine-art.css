@@ -1,0 +1,223 @@
+body {
+    background-color: var(--white-background);
+}
+
+.fine-art-header {
+    height: 90vh;
+    padding-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.header-title {
+    height: 55vh;
+    padding-bottom: 5%;
+    padding-left: 10%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+.lead {
+    font-size: 0.8rem;
+}
+
+.header-image-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+}
+
+.header-image {
+    height: 100%;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+
+    background-image: url("https://images.unsplash.com/photo-1614494718779-0ba0e88b9859?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+@media screen and (min-width:1000px) {
+
+    .fine-art-header {
+        padding-top: 100px;
+
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-title {
+        height: 90vh;
+        padding-left: 5%;
+
+        justify-content: center;
+    }
+
+    .header-title h3 {
+        margin-bottom: 20%;
+    }
+
+    .header-title p {
+        font-size: 0.9rem;
+    }
+
+    .header-image-container {
+        width: 55%;
+        height: 85%;
+    }
+
+    .header-image {
+        width: 100%;
+    }
+}
+
+lottie-player {
+    position: absolute;
+    top: 89%;
+    left: 47%;
+    z-index: 2;
+}
+
+
+/* --------------- SECTION 3 IMAGES --------------- */
+
+.quality-images-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.quality-card {
+    width: 50%;
+}
+
+.quality-card:first-child {
+    margin: 0 25%;
+}
+
+.quality-card img {
+    max-width: 250px;
+}
+
+.quality-card p {
+    padding: 10px 10px 0;
+    font-size: 0.7rem;
+}
+
+@media screen and (min-width:600px) {
+
+    .quality-images-container {
+        margin: 0 auto;
+        margin-bottom: 200px;
+    }
+
+    .quality-card {
+        width: 33%;
+    }
+
+    .quality-card:first-child {
+        margin: initial;
+    }
+
+    .quality-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .quality-card p {
+        font-size: inherit;
+    }
+}
+
+
+/* ----------- SECTION CON LE FOTO ----------- */
+
+.section-fine-art {
+    width: 100%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fine-art-image-text-container {
+    width: 45%;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.fine-art-image-text-container> :not(:last-child) {
+    padding-bottom: 20px;
+}
+
+.specific-foto li:not(li:last-child) {
+    padding-bottom: 5px;
+}
+
+.fine-art-image-container {
+    width: 55%;
+    height: 65vh;
+    padding-right: 2%;
+}
+
+.fine-art-image-container-sx {
+    width: 55%;
+    height: 65vh;
+    padding-left: 2%;
+}
+
+@media screen and (max-width: 851px) {
+
+    .fine-art-image-text-container {
+        width: 100%;
+    }
+
+    .fine-art-image-container {
+        width: 100%;
+        height: 45vh;
+
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+}
+
+.fine-art-image {
+    height: 100%;
+
+    background-image: url(/assets/img/FOTO/Z-FINE-ART/aL1030622a\ Iraq.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hr-dx {
+    margin-right: 15%;
+}
+
+.hr-sx {
+    margin-left: 15%;
+}

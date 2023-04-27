@@ -1,0 +1,950 @@
+body {
+    background-color: var(--my-black);
+    width: 100%;
+}
+
+/* questo è da risolvere */
+.ciao {
+    height: 1200px;
+    /* background-color: var(--my-white); */
+    background-color: var(--white-background);
+    position: relative;
+    z-index: 1;
+}
+
+.my-hero {
+    height: 100vh;
+    height: 100svh;
+    width: 100%;
+
+    background-image: url(/assets/img/home/sfondo-big-2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    /* background-position-x: 50pxpx; */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+/* Change the background color after scrolling */
+.my-hero.black-bg {
+    background-color: var(--my-black);
+}
+
+/* Mobile screen */
+@media screen and (max-width: 600px) {
+    .my-hero {
+        background-image: url(/assets/img/home/mobile-bg-prova.jpg);
+        height: 100vh;
+        height: 100svh;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 8vh;
+    }
+}
+
+.wrapper-intro {
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+
+.typing-container {
+    margin-left: 15%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: start;
+
+}
+
+/* Typing settings */
+.typing-container h1,
+.typing-container h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    color: white;
+    font-size: 2.8em;
+
+    text-align: center;
+
+    margin-bottom: 0;
+}
+
+.typing-container h1 {
+    padding-right: 10px;
+}
+
+.typing-container h2 span.typed-text {
+    font-weight: normal;
+    color: var(--my-orange);
+}
+
+.typing-container h2 span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+}
+
+.typing-container h2 span.cursor.typing {
+    animation: none;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+
+    49% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: #ccc;
+    }
+}
+
+
+
+/* Mobile screen h1 h2 */
+
+@media screen and (max-width: 767px) {
+    .typing-container {
+        margin: 0 auto;
+        margin-bottom: 45vh;
+
+        flex-direction: column;
+
+        font-size: 0.9em;
+    }
+
+    .typing-container h1,
+    .typing-container h2 {
+
+        text-align: left;
+        font-size: 2.5em;
+    }
+
+    .typing-container h2 {
+        text-align: center;
+    }
+
+    .typing-container h1 {
+        padding: 0;
+    }
+}
+
+/* Tablet screen h1 h2 */
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .typing-container {
+        flex-direction: column;
+    }
+
+    .typing-container h1,
+    .typing-container h2 {
+
+        text-align: center;
+        font-size: 2.3em;
+    }
+}
+
+/* End Typing settings */
+
+.prova {
+    height: 600px;
+}
+
+.panel {
+    height: auto;
+    width: 100%;
+    background: #e2e2e2;
+    position: relative;
+    z-index: 2;
+    color: #000;
+    padding: 5%;
+}
+
+.img-profile {
+    width: 90%;
+    min-width: 340px;
+
+    border-radius: 50%;
+    box-shadow: 0 10px 20px grey;
+}
+
+.intro-1 {
+    padding: 3%;
+}
+
+.intro-1 p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 10px 5px 15px rgb(112, 112, 112);
+}
+
+.intro-1 h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-shadow: 10px 5px 15px rgba(112, 112, 112, 0.799);
+}
+
+.col>p:not(.intro-1 > p:first-child) {
+    font-size: 1.3em;
+}
+
+
+
+lottie-player {
+    position: fixed;
+    top: 89%;
+    left: 47%;
+
+}
+
+/* PROVA SECTION TUTTA MIA */
+
+.section-1-wrapper {
+    background-color: var(--white-background);
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.about-1 {
+    /* width: 75%; */
+    width: 98%;
+    padding: 2%;
+
+    background-color: #f7f7f7;
+    border-radius: 40px;
+    /* box-shadow: 0 10px 20px grey; */
+    box-shadow: 17px 17px 40px #949494,
+        -17px -17px 40px #ffffff;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ritratto-seduta {
+    width: 90%;
+    min-width: 250px;
+    max-width: 450px;
+
+
+    border-radius: 50%;
+    /* box-shadow: 0 10px 20px rgba(128, 128, 128, 0.566); */
+    box-shadow: 17px 17px 40px #949494,
+        -17px -17px 40px #ffffff;
+
+}
+
+.chi-sono-2 {
+    width: 100%;
+
+    padding-top: 20px;
+}
+
+.chi-sono-wrapper {
+    max-width: 50%;
+}
+
+.chi-sono-wrapper p:first-of-type,
+.chi-sono-wrapper h2 {
+    font-weight: bold;
+    text-shadow: 0 10px 20px grey;
+}
+
+.chi-sono-wrapper h2 {
+    font-size: 3rem;
+}
+
+.chi-sono-wrapper p:first-of-type {
+    font-size: 1.1rem;
+}
+
+.chi-sono-wrapper p:last-of-type,
+.chi-sono-2 p {
+    font-size: 17px;
+    padding-top: 30px;
+}
+
+@media screen and (max-width: 851px) {
+    .about-1 {
+        width: 100%;
+        padding: 5%;
+
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ritratto-seduta {
+        margin-top: 15px;
+    }
+
+    .chi-sono-wrapper {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+}
+
+/* PROVA VIDEO INTERMEZZO */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-wrapper {
+    aspect-ratio: 16/9;
+    width: 60%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* PROVA TESTO intermezzo */
+
+.section-about-text {
+    background-color: var(--white-background);
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding: 5%;
+
+}
+
+.text-container {
+    width: 80%;
+    margin: auto;
+
+    text-align: center;
+}
+
+.text-container h3 {
+    padding: 5%;
+    font-family: "Italiana";
+}
+
+.text-container p {
+    width: 55%;
+    margin: auto;
+}
+
+.custom-shape-divider-top-1682008701 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1682008701 svg {
+    position: relative;
+    display: block;
+    width: calc(177% + 1.3px);
+    height: 82px;
+}
+
+.custom-shape-divider-top-1682008701 .shape-fill {
+    fill: var(--white-background);
+}
+
+/* ------- 3 ABOUT CARDS PER RIMANDARE ALLA PAGINA ABOUT ME ------- */
+
+.section-about {
+    background-color: var(--my-black);
+    position: relative;
+    z-index: 1;
+
+    /* border: 1px solid red; */
+
+    width: 100%;
+    padding: 5%;
+    padding-top: 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.section-about header {
+    color: var(--white-background);
+    margin-bottom: 5%;
+}
+
+/* cards */
+.about-card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* cards__item */
+.card-container {
+    display: flex;
+    padding: 1rem;
+}
+
+@media(min-width: 40rem) {
+    .card-container {
+        width: 50%;
+    }
+}
+
+@media(min-width: 56rem) {
+    .card-container {
+        width: 33.3333%;
+    }
+}
+
+.mcard {
+    background-color: white;
+    border-radius: 20px;
+    /* box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25); */
+    /* box-shadow: 17px 17px 40px #949494,
+        -17px -17px 40px #ffffff; */
+    box-shadow: 17px 17px 40px #2a2a2a,
+        -17px -17px 40px #1e1e1e;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.mcard:hover .card-image {
+    filter: contrast(100%);
+}
+
+
+/* card__image */
+.card-image {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    /* filter: contrast(70%); */
+    /* filter: saturate(180%); */
+    overflow: hidden;
+    position: relative;
+    transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+}
+
+@media(min-width: 40rem) {
+    .card-image::before {
+        padding-top: 66.6%;
+        /* 3:2 aspect ratio */
+    }
+}
+
+.card-image::before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.card-1 {
+    background-image: url(/assets/img/home/foto-riparo.webp);
+}
+
+.card-2 {
+    background-image: url(/assets/img/home/foto-microfono.jpeg);
+}
+
+.card-3 {
+    background-image: url(/assets/img/home/foto-documentario.jpeg);
+}
+
+.card-content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card-title {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card-text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+
+/* --------- SEZIONE CHE RIMANDA ALLA GALLERY E FINE ART --------- */
+
+.section-gallery {
+    background-color: var(--white-background);
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image-text-container {
+    width: 55%;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-image-text-container> :not(:last-child) {
+    padding-bottom: 20px;
+}
+
+
+.gallery-image-container {
+    width: 45%;
+    height: 65vh;
+
+}
+
+@media screen and (max-width: 851px) {
+
+    .gallery-image-text-container {
+        width: 100%;
+    }
+
+
+    .gallery-image-container {
+        width: 100%;
+        height: 45vh;
+
+        margin-left: 20%;
+        margin-top: 10%;
+
+    }
+
+}
+
+.gallery-image {
+    height: 100%;
+
+    background-image: url(/assets/img/FOTO/COVID19/covid-bw-min.JPG);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 35px 0 0 35px;
+}
+
+/* ------------ The fine ART SECTION ------------ */
+
+.section-fine-art {
+    background-color: #131313;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fine-art-image {
+    height: 100%;
+
+    background-image: url(/assets/img/FOTO/Z-FINE-ART/IMG_9832\ Etiopia.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 0 35px 35px 0;
+}
+
+.fine-art-image-text-container {
+    width: 55%;
+
+    padding: 0 8%;
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+    color: var(--white-background);
+}
+
+.fine-art-image-text-container> :not(:last-child) {
+    padding-bottom: 20px;
+}
+
+
+.fine-art-image-container {
+    width: 45%;
+    height: 65vh;
+}
+
+@media screen and (max-width: 851px) {
+
+    .fine-art-image-text-container {
+        width: 100%;
+
+        margin-top: 10%;
+
+        order: 3;
+    }
+
+
+    .fine-art-image-container {
+        width: 100%;
+        height: 45vh;
+
+        margin-right: 20%;
+        margin-top: 10%;
+
+        order: 4;
+    }
+
+}
+
+/* ------------ SECTION PREMI E RICONOSCIMENTI ------------ */
+
+.section-premi {
+    background-color: var(--white-background);
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 20%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image-premi {
+    width: 90%;
+    height: 500px;
+
+    background-image: url(/assets/img/home/premio-civitas-2019-2.png);
+    background-position: top 25% center;
+    background-size: cover;
+
+    border-radius: 35px;
+}
+
+@media screen and (max-width: 851px) {
+
+    .image-premi {
+        background-position-x: 40%;
+    }
+
+}
+
+
+.premi-title {
+    width: 100%;
+
+    padding: 5% 0;
+    text-align: center;
+}
+
+.premi-icon i {
+    font-size: 30px;
+}
+
+.premi-element i {
+    width: 30px;
+    height: 30px;
+}
+
+.premi-wrapper {
+    width: 80%;
+    padding: 0 10%;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+
+}
+
+.premi-element {
+    width: 150px;
+
+    margin-bottom: 1.2rem;
+}
+
+.premi-element h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.icon-container i {
+    font-size: 2em;
+    padding: 5px 0 50px;
+}
+
+
+/* -------------- FANCY BUTTON -------------- */
+
+.fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    /* float: right; */
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: background 0.3s linear, width 0.3s linear;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: var(--white-background);
+    -webkit-transition: width 0.5s ease-out, left 0.3s ease-out;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: var(--white-background);
+    -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: var(--white-background);
+    -webkit-transition: width 0.5s ease-out, right 0.3s ease-out;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* FANCY INVERT COLORS */
+.fancy-invert {
+    background-color: transparent;
+    border: 2px solid var(--white-background);
+}
+
+.fancy-invert::before {
+    background: var(--white-background);
+}
+
+.fancy-invert .text {
+    color: var(--white-background);
+}
+
+.fancy-invert .top-key {
+    background: var(--my-black);
+}
+
+.fancy-invert .bottom-key-1 {
+    background: var(--my-black);
+}
+
+.fancy-invert .bottom-key-2 {
+    background: var(--my-black);
+}
+
+.fancy-invert:hover {
+    color: var(--my-black);
+    background: var(--white-background);
+}
+
+.fancy-invert:hover::before {
+    background: var(--my-black);
+}
+
+.fancy-invert:hover .text {
+    color: var(--my-black);
+}
+
+
+/* REDESIGN */
+.presentazione-wrapper {
+    height: 800px;
+    padding-top: 5%;
+
+    background-color: var(--white-background);
+
+
+
+    position: relative;
+
+}
+
+.presentazione-foto {
+    width: 44%;
+    float: left;
+
+    border-radius: 20px;
+}
+
+.foto-1 {
+    position: relative;
+    right: 90px;
+}
+
+.foto-2 {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+
+}
+
+.presentazione-title {
+
+    margin-top: 1%;
+    margin-right: 6%;
+}
+
+.presentazione-text {
+    margin-top: 10%;
+    margin-left: 67%;
+    margin-right: 5%;
+}
+
+.presentazione-text .fancy {
+    margin-top: 30px;
+}

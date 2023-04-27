@@ -1,0 +1,256 @@
+body {
+    background-color: var(--white-background);
+}
+
+.contact-title {
+    padding: 10% 0 3%;
+    padding-top: 100px;
+
+    text-align: center;
+}
+
+.contact-title h2 {
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.contact-container {
+    width: 70%;
+    height: 55vh;
+    margin: auto;
+
+    background-color: rgb(215, 180, 128);
+    border-radius: 30px;
+
+
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-container {
+
+    padding: 5%;
+
+    background-color: rgb(33, 33, 33);
+    color: white;
+
+    border-radius: 30px 30px 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-form-container {
+    width: 100%;
+    padding: 5%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* PARTE SINISTRA */
+.contact-info li {
+    padding-bottom: 10px;
+}
+
+.contact-info li:first-child {
+    padding-top: 10px;
+}
+
+/* ICONS */
+
+.contact-info .fa {
+    font-size: inherit;
+}
+
+.contact-info .fa:hover {
+    color: var(--my-orange);
+}
+
+.contact-info-icons .fa {
+    font-size: 2.4rem;
+}
+
+.contact-info-icons .fa:hover {
+    color: var(--white-background);
+}
+
+/* PARTE DESTRA */
+/* Styling degli elementi dentro al form */
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-element {
+    margin-bottom: 30px;
+}
+
+.form-dati,
+.form-email {
+    flex-basis: 45%;
+    margin-top: 30px;
+}
+
+input {
+    width: 100%;
+}
+
+.input-row:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input-button {
+    justify-content: center;
+}
+
+
+/* Styling per mobile */
+
+@media screen and (min-width: 800px) {
+
+    .contact-container {
+        flex-direction: row;
+    }
+
+    .contact-info-container {
+        width: 65%;
+
+        border-radius: 30px 0 0 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .contact-container {
+        height: auto;
+        width: 85%;
+    }
+
+    /* PARTE IN ALTO */
+
+    .contact-info-title h3 {
+        text-align: center;
+        padding-bottom: 3%;
+    }
+
+    .contact-info-title {
+        padding-top: 3%;
+        padding-bottom: 8%;
+
+        text-align: center;
+    }
+
+    .contact-info {
+        margin: auto;
+    }
+
+    .contact-info-icons form {
+        padding: 7% 0 2%;
+        justify-content: center;
+    }
+
+    /* PARTE IN BASSO */
+    .input-row {
+        flex-direction: column;
+    }
+
+    .form-dati,
+    .form-email {
+        flex-basis: 45%;
+        margin-top: 5px;
+    }
+
+    .form-dati {
+        margin-bottom: 10px;
+    }
+
+    .input-row:last-child {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-info-title h3 {
+        text-align: center;
+        padding-bottom: 3%;
+    }
+
+    .contact-info-title {
+        padding-top: 3%;
+        padding-bottom: 8%;
+
+        text-align: center;
+    }
+
+    .contact-info {
+        margin: auto;
+    }
+
+    .contact-info-icons form {
+        padding: 7% 0 2%;
+        justify-content: center;
+    }
+
+    .contact-info-icons form {
+        justify-content: center;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .form-dati,
+    .form-email {
+        width: 85%;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+
+        flex-basis: 45%;
+
+    }
+
+    .form-dati {
+        margin-bottom: 10px;
+    }
+
+    .input-row:last-child {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+}
+
+
+
+
+
+/* MODIFICHE ASPETTO FORM */
+form input {
+    padding: 7px 20px;
+
+    border: none;
+    border-radius: 16px;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 30px;
+}
+
+.button-size {
+    padding: 5px 15px;
+}

@@ -1,0 +1,357 @@
+/* Reset */
+body,
+html {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+img {
+    height: auto;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.8rem;
+}
+
+h6 {
+    font-size: 0.6rem;
+}
+
+a {
+    text-decoration: none
+}
+
+/* I MIEI COLORI */
+:root {
+    --my-black: #131313;
+    /* --my-white: #F8F9FA; */
+    --my-white: #ffffff;
+    --my-orange: #dd7732;
+    /* --white-background: #e2e2e2; */
+    --white-background: #ffffff;
+}
+
+/* NAVBAR */
+
+nav {
+    /* border-radius: 20px; */
+    border-radius: 35px;
+    box-shadow: 2px 2px 2px rgba(19, 19, 19, 0.189);
+}
+
+/* NAVBAR links decoration */
+@media screen and (min-width: 992px) {
+    .link {
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .link::before,
+    .link::after {
+        position: absolute;
+        width: 80%;
+        height: 0.5px;
+        background: currentColor;
+        top: 75%;
+        left: 11%;
+        pointer-events: none;
+    }
+
+    .link::before {
+        content: '';
+        /* show by default */
+    }
+
+    /* .link-style {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 1.375rem;
+} */
+
+    .link-style::before {
+        transform-origin: 50% 100%;
+        transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+        clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+    }
+
+    .link-style:hover::before {
+        transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+        clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+    }
+
+    .link-style span {
+        display: inline-block;
+        transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    }
+
+    .link-style:hover span {
+        transform: translate3d(0, -2px, 0);
+    }
+
+}
+
+/* Qualche modifica alle icone della navbar */
+.fa {
+    color: var(--my-orange);
+    font-size: 27px;
+    transition: all 0.3s ease-in-out;
+}
+
+.fa:hover {
+    color: var(--my-black);
+}
+
+/* NAVBAR Button Style */
+.my-button {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #e7e7e7;
+
+    border: none;
+    padding: 1.5rem 3rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    display: inline-block;
+}
+
+.my-button::before,
+.my-button::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.button-style {
+    /* font-family: freight-display-pro, serif; */
+    /* font-size: 1.15rem; */
+    color: #fff;
+    background: none;
+    padding: 0;
+}
+
+.button-style .button-bg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #e7e7e7;
+    /* border-radius: 0.85rem; */
+    border-radius: 35px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.button-style:hover .button-bg {
+    transform: scale3d(1.2, 1.2, 1);
+}
+
+.button-style .button-bg::before,
+.button-style .button-bg::after {
+    content: '';
+    position: absolute;
+    background: #000;
+}
+
+.button-style .button-bg::before {
+    width: 110%;
+    height: 0;
+    padding-bottom: 110%;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 1);
+}
+
+.button-style:hover .button-bg::before {
+    transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+.button-style .button-bg::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.button-style:hover .button-bg::after {
+    opacity: 1;
+    transition-duration: 0.01s;
+    transition-delay: 0.3s;
+}
+
+.button-style span {
+    display: block;
+    position: relative;
+    padding: 0.45rem 1.15rem;
+    mix-blend-mode: difference;
+}
+
+/* Queste servono per l'animazione fade-in */
+
+.title {
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+    opacity: 0;
+}
+
+.in-page .title {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.fade-in.in-page {
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+/* ---------------- BUTTON ---------------- */
+.button-style .button-bg-body {
+    background: var(--my-orange);
+}
+
+.button-style .button-bg-body::before,
+.button-style .button-bg-body::after {
+    content: '';
+    position: absolute;
+    background: lightgray;
+}
+
+#cta span {
+    mix-blend-mode: lighten;
+    /* color: white; */
+}
+
+/* -------------- FOOTER -------------- */
+
+.footer-container {
+    background-color: #b5b5b5;
+    padding: 2% 6%;
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.6em;
+}
+
+.footer-column p {
+    font-size: smaller;
+}
+
+.footer-column {
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.column-details {
+    max-height: 200px;
+}
+
+@media screen and (max-width: 851px) {
+
+    .footer-container {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .footer-column {
+        width: 45%;
+        margin: auto;
+    }
+
+    .column-details {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .column-details,
+    .column-browse {
+        margin-top: 0.7em;
+    }
+
+}
+
+/* ------------ HELPERS ------------ */
+
+.mborder {
+    border: 0px solid red;
+}
+
+.spacer {
+    height: 100px;
+}
