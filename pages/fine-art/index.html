@@ -14,6 +14,10 @@
     <!-- Icons - Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,10 +70,7 @@
                         </a>
                     </li>
                     <li>
-                        <!-- <a class="btn btn-outline-secondary contact-button" href="#">
-                            <span>Contattami</span>
-                        </a> -->
-                        <a href="/pages/contacts/">
+                        <a href="/index.html#contact-form">
                             <button class="my-button button-style">
                                 <div class="button-bg"></div>
                                 <span>Contattami</span>
@@ -78,11 +79,11 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <a href="https://www.facebook.com/andreja.restek/"><i class="fa fa-facebook pe-4"
+                    <a href="https://www.facebook.com/andreja.restek/"><i class="fa fa-brands fa-facebook pe-4"
                             aria-hidden="true"></i></a>
                     <a href="https://www.linkedin.com/in/andrejarestek/?originalSubdomain=it"> <i
-                            class="fa fa-linkedin pe-4" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/andrejarestek/"> <i class="fa fa-instagram pe-2"
+                            class="fa fa-brands fa-linkedin-in pe-4" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/andrejarestek/"> <i class="fa fa-brands fa-instagram pe-2"
                             aria-hidden="true"></i></a>
                 </form>
             </div>
@@ -90,64 +91,124 @@
         </div>
     </nav>
     <!-----------------   FINE NAVBAR   ----------------->
+
+    <!-- HERO SECTION  -->
+    <div class="hero grayscale">
+        <div class="hero__bg">
+            <picture>
+                <img
+                    src="https://images.unsplash.com/photo-1503694978374-8a2fa686963a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJpbnRpbmclMjBtYWNoaW5lfGVufDB8fDB8fHww&w=1000&q=80">
+            </picture>
+        </div>
+
+        <div class="hero__cnt">
+            <h1>FINE ART</h1>
+        </div>
+    </div>
+    <!-- FINE HERO SECTION -->
+
     <header class="container-fluid fine-art-header">
 
-
-        <div class="header-title ">
-
-            <h3>Dallo scatto alla stampa:<br>
-                l'importanza<br>
-                dei <strong>materiali</strong>
+        <div class="header-title">
+            <h3>
+                Dallo scatto alla stampa:
             </h3>
-            <p class="lead">Il lusso dei dettagli: come la stampa su materiali pregiati trasforma la fotografia</p>
 
+            <p class="lead">
+                Ogni immagine in questa collezione è stata attentamente scelta e selezionata da Andreja Restek, con
+                l'obiettivo di
+                catturare momenti significativi e rivelatori della condizione umana durante i conflitti.
+                <br>
+                Queste immagini
+                raccontano
+                storie che non possono essere ignorate.
+            </p>
         </div>
 
         <div class="header-image-container">
-            <div class="header-image" data-aos="fade-up"></div>
+            <div class="header-image grayscale" data-aos="zoom-in" data-aos-delay="1000" data-aos-once="true"></div>
         </div>
-
-        <lottie-player src="/assets/video/scroll-down-orange.json" background="transparent" speed="1"
-            style="width: 60px; height: 60px;" loop autoplay></lottie-player>
-
-
     </header>
+
+    <!-- <div class="linegrow mt-5 mb-4 active"></div> -->
+
+    <div class="gallleria-titolo pt-5">
+        <!-- <h2 class="text-center">Galleria</h2> -->
+        <div class="galleria-text-box">
+            <div class="galleria-text-box-1  ff">
+                <p>
+                    Ogni fotografia in questa collezione può essere stampata e appesa nelle tue pareti per trasformare
+                    il tuo spazio in
+                    un'esperienza visiva straordinaria. Queste immagini portano con sé la profondità
+                    delle storie umane vissute da Andreja nei luoghi più remoti e travagliati.
+                </p>
+
+            </div>
+            <div class="galleria-text-box-2 ff">
+                <p>
+                    Questa collezione non è solo una serie di fotografie; è un'impronta tangibile dell'impegno e della
+                    passione di Andreja
+                    per la testimonianza visiva. Ogni stampa deve essere realizzata con materiali di altissima qualità e
+                    con
+                    tecniche di stampa che
+                    valorizzano le sfumature e l'energia di ogni immagine. Andreja ha scelto personalmente il metodo di
+                    stampa e i materiali
+                    che meglio rendono onore alla sua visione artistica e al messaggio che queste foto trasmettono.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!------------ QUALITY SECTION ------------>
     <section>
 
+        <div class="quality-section-title text-center">
+            <h4 class="fw-bold">I materiali scelti:</h4>
+        </div>
+
         <div class="quality-section">
+
 
             <div class="quality-images-container">
 
-                <div class="quality-card" data-aos="fade-up">
-                    <img src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_quality.svg?v=1658847468">
-                    <h4>Carta Hahnemüle
-                        Fine Art</h4>
-                    <p>Hahnemühle, dal 1584, è l’azienda leader tra i produttori di carte artistiche.
-                        La linea Fine Art è il fiore all’occhiello della cartiera tedesca.
-                    </p>
+                <div class="quality-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_quality.svg?v=1658847468"
+                        data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
+
+                    <div data-aos="fade-up" data-aos-delay=" 3000" data-aos-duration="3000">
+                        <h4>Carta Hahnemüle
+                            Fine Art</h4>
+                        <p>Hahnemühle, dal 1584, è l’azienda leader tra i produttori di carte artistiche.
+                            La linea Fine Art è il fiore all’occhiello della cartiera tedesca.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="quality-card" data-aos="fade-up">
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_printing_magnifier.svg?v=1658847468">
-                    <h4>Cotone bianco (308gms)</h4>
-                    <p>Questa carta in cotone bianco si contraddistingue per la sua
-                        morbidezza al tatto, che dona
-                        a ciascuna opera d'arte una struttura delicata, tridimensionale e una notevole profondità
-                        pittorica.</p>
+                <div class="quality-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_printing_magnifier.svg?v=1658847468"
+                        data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
+
+                    <div data-aos="fade-up" data-aos-delay=" 3000" data-aos-duration="3000">
+                        <h4>Cotone bianco (308gms)</h4>
+                        <p>Questa carta in cotone bianco si contraddistingue per la sua
+                            morbidezza al tatto, che dona
+                            a ciascuna opera d'arte una struttura delicata, tridimensionale e una notevole profondità
+                            pittorica.</p>
+                    </div>
                 </div>
 
-                <div class="quality-card" data-aos="fade-up">
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_Sustainably_Sourced.svg?v=1658847468">
-                    <h4>Inchiostro ai pigmenti di carbone</h4>
-                    <p>La carta Fine art è realizzata a mano e priva di acidi.
-                        Inoltre, la stampa a pigmenti di carbone utilizza più inchiostro rispetto ad altri metodi,
-                        offrendo una maggiore
-                        riflessione della luce agli occhi dello spettatore.
-                    </p>
+                <div class="quality-card">
+                    <img src="https://cdn.shopify.com/s/files/1/0363/0858/2538/files/Icon_Sustainably_Sourced.svg?v=1658847468"
+                        data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
+
+                    <div data-aos="fade-up" data-aos-delay=" 3000" data-aos-duration="3000">
+                        <h4>Inchiostro ai pigmenti di carbone</h4>
+                        <p>La carta Fine art è realizzata a mano e priva di acidi.
+                            Inoltre, la stampa a pigmenti di carbone utilizza più inchiostro rispetto ad altri metodi,
+                            offrendo una maggiore
+                            riflessione della luce agli occhi dello spettatore.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -161,11 +222,23 @@
 
     <section class="section-fine-art">
 
+
         <div class="fine-art-image-text-container">
             <h2>Iraq</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
+            <p>
+                Un albero rimasto solitario è un simbolo della resilienza della natura. È un ricordo che anche nei
+                momenti più
+                difficili, la
+                natura è sempre presente. L'albero è un simbolo di speranza. È un ricordo che anche quando tutto
+                sembra
+                perduto, c'è
+                sempre la possibilità di un nuovo inizio.
+                <br> <br>
+                Il netto contrasto tra il bianco e il nero crea un senso di drammaticità e il campo vuoto sottolinea
+                l'isolamento
+                dell'albero.
+            </p>
 
             <ul class="specific-foto">
 
@@ -196,7 +269,7 @@
 
     <hr class="hr-sx">
 
-    <section class="section-fine-art">
+    <section class="section-fine-art section-fine-art-sx">
 
         <div class="fine-art-image-container-sx">
             <div class="fine-art-image"
@@ -207,8 +280,16 @@
         <div class="fine-art-image-text-container">
             <h2>Etiopia</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
+            <p>
+                Questa fotografia cattura un momento nel tempo nell'Etiopia rurale. Un uomo cavalca un
+                cavallo lungo una
+                strada sterrata, con il volto riparato da un cappello.
+                I due si stagliano sullo sfondo di un terreno dissestato.
+                <br>
+
+                La linea dell'orizzonte divide l'immagine in due metà uguali che si fondono grazie al bianco e nero.
+
+            </p>
 
             <ul class="specific-foto">
 
@@ -239,8 +320,16 @@
         <div class="fine-art-image-text-container">
             <h2>Iraq</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
+            <p>
+                Un piccolo edificio nel mezzo del deserto iracheno, un edificio di mattoni circondato da sabbia e terra
+                senza alcuna vegetazione nelle vicinanze.
+                Le nuvole sottili e vaporose rendono l'atmosfera della foto ancora più aspra e desolata.
+                <br>
+                <br>
+                Lo scatto cattura la cruda bellezza del deserto iracheno, ma anche le dure condizioni che le persone che
+                vivono in Iraq
+                spesso devono affrontare.
+            </p>
 
             <ul class="specific-foto">
 
@@ -271,7 +360,7 @@
 
     <hr class="hr-sx">
 
-    <section class="section-fine-art">
+    <section class="section-fine-art section-fine-art-sx">
 
         <div class="fine-art-image-container-sx">
             <div class="fine-art-image"
@@ -282,26 +371,16 @@
         <div class="fine-art-image-text-container">
             <h2>Syria</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
+            <p>
+                L'edificio in rovina, con solo pochi muri ancora in piedi è un potente promemoria della devastazione
+                causata dalla guerra civile siriana.
+                La foto testimonia la forza del popolo siriano, che ha sopportato tante sofferenze.
+                <br>
+                La presenza della donna che passa davanti alle macerie ci ricorda che anche in mezzo al caos e alla
+                distruzione c'è sempre
+                speranza e la vita continua.
 
-            <ul class="specific-foto">
-
-                <li class="camera">
-                    <h4>Model</h4>
-                    <p>Canon EOS 5D Mark II</p>
-                </li>
-                <li class="focal">
-                    <h4>Focal length</h4>
-                    <p>28 mm</p>
-                </li>
-                <li class="exposure">
-                    <h4>Exposure time</h4>
-                    <p>1/320</p>
-                </li>
-
-            </ul>
-
+            </p>
 
         </div>
 
@@ -312,29 +391,21 @@
     <section class="section-fine-art">
 
         <div class="fine-art-image-text-container">
-            <h2>Campo Rifugiati</h2>
+            <h2>Campo Rifugiati-
+                <br>
+                Libano
+            </h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
-
-            <ul class="specific-foto">
-
-                <li class="camera">
-                    <h4>Model</h4>
-                    <p>LEICA CAMERA AG</p>
-                </li>
-                <li class="focal">
-                    <h4>Focal length</h4>
-                    <p>28 mm</p>
-                </li>
-                <li class="exposure">
-                    <h4>Exposure time</h4>
-                    <p>1/500</p>
-                </li>
-
-            </ul>
-
-
+            <p>
+                La rappresentazione della dura realtà della vita dei rifugiati in Libano. <br>
+                Una donna ed un bambino fermi sull'uscio di una baracca fatta di legno e con un tetto ricoperto di
+                plastica.
+                <br>
+                L'espressione della madre sembra triste e rassegnata, mentre il bambino guarda direttamente verso la
+                macchina fotografica con un'espressione incuriosita.
+                <br>
+                Un'immagine potente e commovente che cattura il costo umano della guerra e dello sfollamento.
+            </p>
         </div>
 
         <div class="fine-art-image-container">
@@ -343,6 +414,51 @@
                 data-aos="fade-left"></div>
         </div>
 
+    </section>
+
+    <section class="fine-art-contact">
+
+
+    </section>
+
+
+    <section id="cta-262" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+        <div class="cs-container">
+            <div class="cs-left-section">
+                <h2 class="cs-title">Mettiti in contatto per Dettagli e Stampe</h2>
+                <!-- <a href="/index.html#contact-form" class="cs-button-solid">Mettiti in contatto</a> -->
+                <a href="/pages/contacts/">
+                    <button class="my-button button-style">
+                        <div class="button-bg"></div>
+                        <span>Mettiti in contatto</span>
+                    </button>
+                </a>
+            </div>
+            <div class="cs-content">
+                <span class="cs-header">
+                    Contact info
+                </span>
+
+                <p class="cs-p">
+                    Per maggiori informazioni su come possedere queste opere d'arte fotografiche uniche e autentiche,
+                    <br>
+                    non esitare a
+                    contattare personalmente Andreja Restek.
+                </p>
+                <p class="cs-p mt-4">
+                    Saranno forniti tutti i dettagli su materiali, dimensioni e opzioni di stampa <br> che
+                    rendono giustizia a queste potenti immagini.
+                </p>
+
+            </div>
+            <picture class="cs-background grayscale">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth-m.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth.jpg">
+                <img aria-hidden="true" loading="lazy" decoding="async"
+                    src="https://csimg.nyc3.digitaloceanspaces.com/CTA/cloth.jpg" alt="appliance" width="275"
+                    height="132">
+            </picture>
+        </div>
     </section>
 
     <!----------- FOOTER ------------->
@@ -386,6 +502,139 @@
 
     </footer> -->
 
+
+    <!-- FOOTER -->
+
+    <footer class="text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-5 col-xl-5 mx-auto mt-3">
+
+                        <img src="/assets/img/logo/andreja-signature-white.png" width="150px" alt="logo">
+
+                        <h5 class="text-uppercase my-3 font-weight-bold">
+                            Andreja Restek
+                        </h5>
+                        <p>
+                            Giornalista e fotoreporter. Voce globale del giornalismo investigativo e della testimonianza
+                            umanitaria.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                            <p>
+                                <a class="text-white">MDBootstrap</a>
+                            </p>
+                            <p>
+                                <a class="text-white">MDWordPress</a>
+                            </p>
+                            <p>
+                                <a class="text-white">BrandFlow</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Bootstrap Angular</a>
+                            </p>
+                        </div> -->
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Links
+                        </h6>
+                        <p>
+                            <a class="text-white footer-link" href="/index.html">Home</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/gallery/">Galleria</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/fine-art/">Fine Art</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/articles/">About</a>
+                        </p>
+
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contatti</h6>
+                        <p><i class="fa-solid fa-location-dot me-2 mb-1 "></i> Torino, Italia</p>
+                        <p><i class="fas fa-envelope me-2 mb-1 "></i> andrejarestek@gmail.com</p>
+                        <p><i class="fas fa-phone me-2 mb-2 "></i> + 39 347 567 88</p>
+
+                        <a href="/pages/contacts/">
+                            <button class="my-button button-style">
+                                <div class="button-bg"></div>
+                                <span>Contattami</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            © 2023 Copyright:
+                            Andreja Restek
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
+        </div>
+        <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+
     <!-- BOOTSTRAP CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -395,6 +644,9 @@
     <script src="/js/animation-on-scroll.js"></script>
 
     <script src="/js/fade-in.js"></script>
+
+    <script src="/js/line-animation.js"></script>
+
 
 </body>
 

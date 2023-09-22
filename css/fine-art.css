@@ -1,10 +1,121 @@
 body {
-    background-color: var(--white-background);
+    /* background-color: var(--white-background); */
 }
 
+/* HERO SECTION  */
+.hero {
+    display: grid;
+    position: relative;
+    grid-template-columns: 100vw;
+    grid-template-rows: 70vh;
+    place-items: center;
+    overflow: hidden;
+    animation: clip-hero-anim 2s cubic-bezier(0.29, 0.8, 0.8, 0.98);
+    will-change: clip-path;
+}
+
+.hero__bg,
+.hero__cnt {
+    align-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hero__bg {
+    display: grid;
+    position: relative;
+    z-index: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    animation: fade-in 1.5s linear;
+    will-change: opacity;
+}
+
+.hero__bg::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: -10%;
+    right: -10%;
+    bottom: -10%;
+    left: -10%;
+    background: rgba(41, 4, 47, 0.4);
+    background-blend-mode: screen;
+}
+
+.hero__bg picture {
+    display: flex;
+    height: 70vh;
+    width: 100vw;
+    animation: scaling-hero-anim 6s 0.5s cubic-bezier(0, 0.71, 0.4, 0.97) forwards;
+    will-change: transform;
+}
+
+.hero__bg img {
+    display: block;
+    object-fit: cover;
+    object-position: 77% 50%;
+    height: auto;
+    width: 100%;
+}
+
+.hero__cnt {
+    display: grid;
+    position: relative;
+    place-items: center;
+    z-index: 10;
+    color: #FFF;
+    font-size: 2.5vw;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade-in 1.5s 2s linear forwards;
+}
+
+.hero__cnt h1 {
+    margin-bottom: 0;
+}
+
+.grayscale {
+    filter: grayscale(0.8);
+    -webkit-filter: grayscale(0.8);
+    filter: grayscale(80%);
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaling-hero-anim {
+    from {
+        transform: scale(1.25);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes clip-hero-anim {
+    from {
+        clip-path: polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+/* FINE HERO SECTION */
 .fine-art-header {
-    height: 90vh;
-    padding-top: 100px;
+    height: 80vh;
 
     display: flex;
     flex-direction: column;
@@ -12,24 +123,28 @@ body {
 }
 
 .header-title {
+    width: 90%;
     height: 55vh;
-    padding-bottom: 5%;
-    padding-left: 10%;
+    /* padding-bottom: 5%; */
+    /* padding-left: 10%; */
+    margin: auto;
 
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: center;
 
 }
 
 .lead {
-    font-size: 0.8rem;
+    margin-top: 5%;
 }
 
 .header-image-container {
     height: 100%;
     width: 100%;
+
+    margin-right: %;
 
     display: flex;
     justify-content: center;
@@ -42,17 +157,60 @@ body {
     display: flex;
     justify-content: center;
 
-    background-image: url("https://images.unsplash.com/photo-1614494718779-0ba0e88b9859?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-image: url(/assets/img/home/andreja-stampa-ups.jpeg);
     background-size: cover;
     background-position: center;
 
+    border-radius: 15px;
+
 }
 
+@media screen and (max-width:450px) {
+
+    .fine-art-header {
+        height: auto;
+    }
+
+    .header-title {
+        margin-top: 15%;
+        height: 45vh;
+    }
+
+    .lead {
+        margin: 10% 0;
+    }
+
+    .header-image-container {
+        height: 35vh;
+    }
+
+    .header-image {
+        height: 100%;
+        width: 95%;
+
+        display: flex;
+        justify-content: center;
+
+        background-image: url(/assets/img/home/andreja-stampa-mobile-ups.jpg);
+        background-size: cover;
+        background-position: center;
+
+        border-radius: 15px;
+    }
+
+}
+
+@media screen and (max-width:850px) {
+    .header-image {
+
+        background-image: url(/assets/img/home/andreja-stampa-mobile-ups.jpg);
+
+    }
+}
 
 @media screen and (min-width:1000px) {
 
     .fine-art-header {
-        padding-top: 100px;
 
         flex-direction: row;
         justify-content: space-between;
@@ -60,22 +218,26 @@ body {
 
     .header-title {
         height: 90vh;
+        width: 45%;
         padding-left: 5%;
 
         justify-content: center;
     }
 
     .header-title h3 {
-        margin-bottom: 20%;
+        margin-bottom: 5%;
     }
 
     .header-title p {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .header-image-container {
-        width: 55%;
-        height: 85%;
+        width: 50%;
+        height: 75%;
+
+        padding-right: 2%;
+        margin-top: 5%;
     }
 
     .header-image {
@@ -90,8 +252,108 @@ lottie-player {
     z-index: 2;
 }
 
+/* SECTION  */
+
+.galleria-text-box {
+    display: table;
+    /* Utilizza una visualizzazione da tabella */
+    width: 100%;
+    /* Assicura che il contenitore occupi tutto lo spazio disponibile */
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.galleria-text-box-1,
+.galleria-text-box-2 {
+    display: table-cell;
+    /* Utilizza una visualizzazione da cella di tabella */
+    padding: 1em;
+    /* Aggiungi spaziatura interna */
+}
+
+.galleria-text-box-1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.galleria-text-box-2 {
+    font-size: 1rem;
+    /* Esempio di dimensione del font diversa */
+}
+
+.ff {
+    width: 45%;
+}
+
+/* LINE */
+.linegrow {
+
+    display: block;
+    position: relative;
+    top: 45%;
+    left: 50%;
+
+    border-bottom: 1px solid black;
+    width: 0%;
+    text-align: center;
+}
+
+.linegrow.active {
+    animation: linegrow 2.5s linear forwards;
+}
+
+@keyframes linegrow {
+    from {
+        left: 50%;
+        width: 0%;
+    }
+
+    to {
+        left: 5%;
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .galleria-text-box {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+    .galleria-text-box-1 {
+        font-size: 1rem;
+    }
+
+    .galleria-text-box-2 {
+        font-size: 0.9rem;
+    }
+
+    .ff {
+        width: 100%;
+    }
+
+}
+
 
 /* --------------- SECTION 3 IMAGES --------------- */
+
+.quality-section-title {
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
 
 .quality-images-container {
     width: 90%;
@@ -174,6 +436,10 @@ lottie-player {
     padding-bottom: 20px;
 }
 
+.specific-foto {
+    display: none;
+}
+
 .specific-foto li:not(li:last-child) {
     padding-bottom: 5px;
 }
@@ -182,6 +448,8 @@ lottie-player {
     width: 55%;
     height: 65vh;
     padding-right: 2%;
+
+    overflow: hidden;
 }
 
 .fine-art-image-container-sx {
@@ -192,6 +460,10 @@ lottie-player {
 
 @media screen and (max-width: 851px) {
 
+    .section-fine-art {
+        padding-top: 7%;
+    }
+
     .fine-art-image-text-container {
         width: 100%;
     }
@@ -201,7 +473,25 @@ lottie-player {
         height: 45vh;
 
         margin-left: 5%;
-        margin-top: 10%;
+        margin-top: 3%;
+    }
+
+    .fine-art-image-container-sx {
+        width: 100%;
+        height: 45vh;
+        padding-right: 5%;
+        margin-top: 3%;
+    }
+
+    .section-fine-art-sx {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .fine-art-image-text-container {
+        margin-bottom: 1rem;
     }
 }
 
@@ -213,6 +503,214 @@ lottie-player {
     background-position: center;
 }
 
+/* SECTION CONTACT */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    :root {
+        /* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
+        --primary: #D98900;
+        --primaryLight: #FFCC75;
+        --secondary: #FFBA43;
+        --secondaryLight: #FFBA43;
+        --headerColor: #1a1a1a;
+        --bodyTextColor: #4E4B66;
+        --bodyTextColorWhite: #FAFBFC;
+        /* 13px - 16px */
+        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        /* 31px - 49px */
+        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+        --bodyFontSize: 1rem;
+        /* 60px - 100px top and bottom */
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    }
+
+    #cta-262 {
+        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+        font-family: 'Roboto', 'Arial', sans-serif;
+        padding: var(--sectionPadding);
+    }
+
+    #cta-262 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        /* 32px - 88px top & bottom */
+        /* 24px - 88px left & right */
+        padding: clamp(2em, 6.3vw, 5.5em) clamp(1.5em, 5.7vw, 5.5em);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+        position: relative;
+        /* clips the corners for the border radius to show */
+        overflow: hidden;
+        z-index: 1;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+    }
+
+    #cta-262 .cs-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: -1;
+    }
+
+    #cta-262 .cs-background:before {
+        /* black overlay */
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: .7;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    #cta-262 .cs-background:after {
+        /* brown overlay */
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: var(--primaryLight);
+        opacity: .2;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    #cta-262 .cs-background img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    #cta-262 .cs-left-section {
+        max-width: 27.125rem;
+    }
+
+    #cta-262 .cs-title {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 3.9vw, 3.0625rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: left;
+        max-width: 50rem;
+        /* 20px - 48px */
+        margin: 0 auto clamp(1.25rem, 4.7vw, 3rem);
+        color: var(--bodyTextColorWhite);
+        position: relative;
+    }
+
+    #cta-262 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+
+    #cta-262 .cs-button-solid:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width .3s;
+    }
+
+    #cta-262 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+
+    #cta-262 .button-style {
+        color: #fff;
+    }
+
+    #cta-262 .button-style span {
+        padding: 0.75rem 1.25rem;
+        mix-blend-mode: normal;
+        font-weight: bold;
+    }
+
+    #cta-262 .button-style .button-bg {
+        background: var(--my-orange);
+    }
+
+
+    #cta-262 .cs-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        /* 12px - 20px */
+        gap: clamp(0.75rem, 1.6vw, 1.25rem);
+    }
+
+    #cta-262 .cs-header {
+        /* 20px - 25px */
+        font-size: clamp(1.25rem, 2.4vw, 1.5625rem);
+        font-weight: bold;
+        color: var(--my-orange);
+        display: block;
+    }
+
+    #cta-262 .cs-p {
+        /* 14px - 20px */
+        font-size: clamp(0.875rem, 1.5vw, 1.25rem);
+        line-height: 1.5em;
+        margin: 0;
+        color: var(--bodyTextColorWhite);
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #cta-262 .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #cta-262 .cs-content {
+        align-items: flex-end;
+        text-align: right;
+        /* prevents flexbox from squishing it */
+        /* flex: none; */
+    }
+}
+
+/* HELPERS */
 
 .hr-dx {
     margin-right: 15%;

@@ -27,7 +27,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+
 
     <!-- Animation on scroll -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -38,6 +47,19 @@
 </head>
 
 <body>
+
+    <!-- LOADING ANIMATION -->
+    <div class="loader-container loader-hidde">
+        <div class="wrapper-loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
     <!--------------------   NAVBAR   -------------------->
     <nav class="navbar navbar-expand-lg bg-light fixed-top mt-2 mx-3">
         <div class="container-fluid">
@@ -74,7 +96,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/pages/contacts/">
+                        <a href="/index.html#contact-form">
                             <button class="my-button button-style">
                                 <div class="button-bg"></div>
                                 <span>Contattami</span>
@@ -97,21 +119,101 @@
     <!-----------------   FINE NAVBAR   ----------------->
 
     <!-----------------   INIZIO HERO   ----------------->
-    <header class="my-hero watch">
-        <div class="wrapper-intro title">
+    <header class="my-hero watch ">
+        <!-- <div class="wrapper-intro title"> -->
+        <div class="wrapper-intro">
 
-            <div class="typing-container ">
-                <h1>Andreja Restek</h1>
-                <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+            <div class="heading">
+                <div class="typing-container">
+                    <h1>Andreja Restek</h1>
+                    <h2><span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+                </div>
+                <div class="sub-heading-hero">
+                    <h3>Giornalista pluripremiata con esperienza internazionale e focus su diritti umani e
+                        terrorismo</h3>
+
+                    <a class="fancy fancy-invert" href="/pages/contacts/"> <span class="top-key"></span>
+                        <span class="text">Mettiti in contatto per un evento</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="social-proof-hero social">
+
+                <div class="numeri-proof social-proof-hero-1">
+                    <h2 id="nbr">20</h2>
+                    <h4>Anni di esperienza <br> sul campo</h4>
+                </div>
+
+                <div class="numeri-proof social-proof-hero-2">
+                    <h2 id="nbr-2">50</h2>
+                    <h4>Collaborazioni con <br> diverse testate</h4>
+                </div>
+
             </div>
 
         </div>
-        <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_o87tttfh.json" background="transparent"
-            speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+
+
+        <!-- <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_o87tttfh.json" background="transparent"
+            speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player> -->
+
+        <lottie-player id="lottie-player" src="https://assets8.lottiefiles.com/packages/lf20_o87tttfh.json"
+            background="transparent" speed="1" style="width: 60px; height: 60px;" loop autoplay></lottie-player>
+
+
     </header>
     <!--------------------   FINE HERO   -------------------->
 
-    <section class="presentazione-wrapper ">
+
+    <section class="marquee-title ">
+        <div class="infinite-scroll-container marquee-header">
+
+            <article class="wrapper ">
+                <div class="marquee">
+                    <div class="marquee__group">
+                        <h1 class="heading-3">Every &nbsp;&nbsp; Work&nbsp;&nbsp; Of&nbsp;&nbsp; Art&nbsp;&nbsp;
+                            Tells&nbsp;&nbsp;
+                            A&nbsp;&nbsp; Story&nbsp;&nbsp;</h1>
+
+                    </div>
+
+                    <div aria-hidden="true" class="marquee__group">
+                        <h1 class="heading-3">Every &nbsp;&nbsp; Work&nbsp;&nbsp; Of&nbsp;&nbsp; Art&nbsp;&nbsp;
+                            Tells&nbsp;&nbsp;
+                            A&nbsp;&nbsp; Story&nbsp;&nbsp;</h1>
+
+                    </div>
+                </div>
+
+                <div class="marquee marquee--reverse">
+                    <div class="marquee__group">
+                        <h1 class="heading-3">Every &nbsp;&nbsp; Work&nbsp;&nbsp; Of&nbsp;&nbsp; Art&nbsp;&nbsp;
+                            Tells&nbsp;&nbsp;
+                            A&nbsp;&nbsp; Story&nbsp;&nbsp;</h1>
+                    </div>
+
+                    <div aria-hidden="true" class="marquee__group">
+                        <h1 class="heading-3">Every &nbsp;&nbsp; Work&nbsp;&nbsp; Of&nbsp;&nbsp; Art&nbsp;&nbsp;
+                            Tells&nbsp;&nbsp;
+                            A&nbsp;&nbsp; Story&nbsp;&nbsp;</h1>
+
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <!-- <section class="presentazione-wrapper ">
 
         <img src="/assets/img/home/ Etiopia-1.jpeg" alt="foto 1" class="presentazione-foto foto-1 animate fade-in-up"
             data-aos="fade-up" data-aos-once="true">
@@ -124,12 +226,15 @@
         </div>
 
         <div class="presentazione-text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit laudantium nesciunt facere
-                dolorum laboriosam autem beatae perferendis
-                doloribus? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit dolorem nisi atque dolores
-                similique!
-                <br> Soluta corporis magni odit repudiandae beatae! Repudiandae iste hic odit unde vero fugit blanditiis
-                dicta.
+            <p>Andreja Restek collabora con diversi giornali, enti e aziende italiani ed esteri, vanta una vasta
+                esperienza
+                internazionale e
+                si è iscritta all'Albo dei giornalisti. Inoltre, fa parte dell'International Federation of Journalist
+                (IFJ) e
+                dell’Environmental Peacebuilding. <br> Grazie alle sue numerose collaborazioni italiane ed estere,
+                Andreja è in grado di
+                fornire una prospettiva globale e completa sui problemi relativi al terrorismo e ai diritti umani in
+                tutto il mondo.
             </p>
 
             <a class="fancy" href="/pages/gallery/"> <span class="top-key"></span>
@@ -140,14 +245,15 @@
 
 
         </div>
-    </section>
+    </section> -->
 
 
 
     <section class="section-1-wrapper">
 
 
-        <div class="about-1" data-aos="fade-up">
+        <!-- <div class="about-1" data-aos="fade-up"> -->
+        <div class="about-1">
             <div class="image-wrapper ">
                 <img class="ritratto-seduta" src="/assets/img/home/ritratto seduta-compressed.jpg"
                     alt="Andreja Restek e la sua macchina fotografica">
@@ -155,24 +261,24 @@
 
             <div class="chi-sono-wrapper ">
                 <p>chi è</p>
-                <h2>Andreja <br> Restek</h2>
-                <p>Andreja Restek è una giornalista fotoreporter di origine croata che vive a
-                    Torino. Ha <strong>oltre 20 anni</strong> di esperienza nel
-                    campo dei media, concentrandosi negli ultimi anni sul monitoraggio e la testimonianza degli eventi e
-                    dei
-                    cambiamenti nei
-                    Paesi del terzo mondo, in particolare nelle zone di conflitto. <br> La sua passione per la
-                    documentazione
-                    e
-                    l'informazione ha
-                    portato alla fondazione di <strong>APR News</strong>, un quotidiano online che si concentra sulla
-                    terrorismo e i
-                    gruppi terroristici a
-                    livello globale e conduce inchieste indipendenti su traffici illeciti e diritti umani.</p>
+                <h2 class="line">Andreja <br> Restek</h2>
+                <p>
+                    Andreja Restek è una giornalista fotoreporter di origine croata con sede a Torino. Con <strong>oltre
+                        20 anni</strong> di esperienza nel
+                    campo dei media, ha dedicato gli ultimi anni a monitorare e documentare gli eventi e i cambiamenti
+                    nei Paesi del terzo
+                    mondo, soprattutto nelle zone di conflitto. La sua passione per la documentazione e l'informazione
+                    l'ha spinta a fondare <strong>APR News</strong>
+                    , un quotidiano online che si concentra sul fenomeno del terrorismo e dei gruppi terroristici in
+                    tutto il mondo,
+                    conducendo anche inchieste indipendenti su traffici illeciti e diritti umani.
+                </p>
             </div>
         </div>
-
     </section>
+
+
+    <div class="linegrow mt-5 mb-4"></div>
 
     <section class="section-about-text">
 
@@ -198,28 +304,159 @@
         </div>
     </section>
 
-    <section class="section-about">
-        <div class="custom-shape-divider-top-1682008701">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                preserveAspectRatio="none">
-                <path
-                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                    opacity=".25" class="shape-fill"></path>
-                <path
-                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                    opacity=".5" class="shape-fill"></path>
-                <path
-                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                    class="shape-fill"></path>
-            </svg>
+    <div class="">
+        <section class="section-about">
+            <div class="custom-shape-divider-top-1682008701">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                        opacity=".25" class="shape-fill"></path>
+                    <path
+                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                        opacity=".5" class="shape-fill"></path>
+                    <path
+                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <header class="text-center">
+                <h2>Servizi Professionali</h2>
+                <p>Raccontare il mondo attraverso l'Obiettivo, il Microfono e il Cuore</p>
+            </header>
+
+
+            <ul class="about-card-container">
+
+                <li class="card-container">
+                    <div class="mcard" data-aos="zoom-in">
+                        <div class="card-image card-1">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Conferenze</h3>
+                            <p class="card-text">
+                                Andreja Restek è una fonte autorevole nell'era dell'informazione digitale.
+                                I
+                                suoi interventi offrono una panoramica sulle tecniche di indagine giornalistica,
+                                l'importanza della ricerca accurata e
+                                l'etica nel reportage.
+                                Con la sua vasta esperienza nel giornalismo investigativo e nella testimonianza
+                                umanitaria,
+                                Andreja fornisce discorsi
+                                coinvolgenti e informativi su temi quali il terrorismo, i conflitti globali e i diritti
+                                umani.
+                            </p>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li class="card-container">
+                    <div class="mcard" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card-image card-2">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Eventi</h3>
+                            <p class="card-text">
+                                Grazie alla sua ampia esperienza nel campo dei servizi fotografici, Andreja Restek offre
+                                la
+                                sua professionalità per una
+                                vasta gamma di eventi, che spaziano da quelli istituzionali alle cerimonie ufficiali,
+                                dalle
+                                manifestazioni culturali
+                                alle occasioni sociali. Che si tratti di eventi
+                                istituzionali solenni,
+                                cerimonie speciali o vibranti manifestazioni, Andreja cattura immagini che raccontano
+                                storie
+                                visive emozionanti e
+                                durature.
+                            </p>
+                        </div>
+                    </div>
+
+                </li>
+
+                <li class="card-container">
+                    <div class="mcard" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card-image card-3">
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Giornalismo</h3>
+                            <p class="card-text">
+                                Specializzata nella realizzazione di reportage
+                                internazionali che raccontano storie complesse
+                                provenienti da diverse parti del mondo, attraverso l'esperienza diretta sul campo,
+                                Andreja
+                                documenta i conflitti, le
+                                crisi umanitarie e le sfide globali che affliggono le comunità vulnerabili. I suoi
+                                reportage
+                                combinano immagini potenti
+                                e narrazioni coinvolgenti per creare una comprensione più profonda dei problemi globali
+                                e
+                                per sensibilizzare l'opinione
+                                pubblica.
+                            </p>
+                        </div>
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <!-- 
+        <div class="servizi-container">
+            <h2>Servizi offerti</h2>
+            <ul class="lista-servizi">
+                <li>
+                    <h3>Conferenze</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ad culpa itaque, tempora quis
+                        vitae nihil tenetur a, dolore repellat obcaecati.</p>
+                </li>
+                <li>
+                    <h3>Reportage</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ad culpa itaque, tempora quis
+                        vitae nihil tenetur a, dolore repellat obcaecati.</p>
+                </li>
+                <li>
+                    <h3>Giornalismo specializzato</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia ad culpa itaque, tempora quis
+                        vitae nihil tenetur a, dolore repellat obcaecati.</p>
+                </li>
+            </ul>
         </div>
 
-        <header>
-            <h2>Esperienza e altro</h2>
+        <div class="collage-container">
+            <div class="collage-items" data-aos="zoom-in"></div>
+            <div class="collage-items" data-aos="zoom-in" data-aos-delay="900"></div>
+            <div class="collage-items" data-aos="zoom-in" data-aos-delay="400"></div>
+            <div class="collage-items" data-aos="zoom-in" data-aos-delay="1400"></div>
+        </div> -->
+
+            <!-- <header>
+            <h2>Esperienza e altro...</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </header>
 
-        <ul class="about-card-container">
+        <div class="container-fluid about-text-container">
+            <div class="about-text about-text-1 container">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates magnam quidem deserunt. Rem
+                    porro
+                    pariatur culpa esse eos reiciendis consequuntur molestiae praesentium? Esse nisi corporis saepe vel
+                    amet
+                    placeat blanditiis.</p>
+            </div>
+            <div class="about-text about-text-2 container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore amet eveniet ex aut, hic
+                    accusantium beatae cupiditate debitis nostrum harum perspiciatis eaque repellendus velit id
+                    consectetur
+                    quas alias sint?</p>
+            </div>
+        </div>
+
+        <div class="image-about-text" data-aos="fade-up"></div> -->
+
+            <!-- <ul class="about-card-container">
 
             <li class="card-container">
                 <div class="mcard" data-aos="fade-up">
@@ -263,25 +500,225 @@
 
             </li>
 
-        </ul>
+        </ul> -->
 
+        </section>
+    </div>
+
+
+
+
+    <!--  Services   -->
+
+
+    <section id="services-341" class="commented-out">
+
+        <div class="custom-shape-divider-top-1682008701">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+
+
+        <div class="cs-container">
+            <div class="cs-content">
+                <!-- <span class="cs-topper">I Servizi</span> -->
+                <h2 class="cs-title text-center">Servizi Professionali</h2>
+                <p class="cs-text">
+                    Raccontare il mondo attraverso l'Obiettivo, il Microfono e il Cuore
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)" srcset="/assets/img/home/foto-microfono.jpeg">
+                            <source media="(min-width: 601px)" srcset="/assets/img/home/foto-microfono.jpeg">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/foto-microfono.jpeg"
+                                alt="cleaner" width="413" height="240" aria-hidden="true">
+                        </picture>
+                        <h3 class="cs-h3">Conferenze</h3>
+                        <p class="cs-item-text">
+                            Andreja Restek è una fonte autorevole nell'era dell'informazione digitale.
+                            I
+                            suoi interventi offrono una panoramica sulle tecniche di indagine giornalistica,
+                            l'importanza della ricerca accurata e
+                            l'etica nel reportage.
+                            Con la sua vasta esperienza nel giornalismo investigativo e nella testimonianza
+                            umanitaria,
+                            Andreja fornisce discorsi
+                            coinvolgenti e informativi su temi quali il terrorismo, i conflitti globali e i diritti
+                            umani.
+                        </p>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)" srcset="/assets/img/home/foto-riparo.webp">
+                            <source media="(min-width: 601px)" srcset="/assets/img/home/foto-riparo.webp">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/foto-riparo.webp" alt="cleaner"
+                                width="413" height="240" aria-hidden="true">
+                        </picture>
+                        <h3 class="cs-h3">Eventi</h3>
+                        <p class="cs-item-text">
+                            Grazie alla sua ampia esperienza nel campo dei servizi fotografici, Andreja Restek offre
+                            la
+                            sua professionalità per una
+                            vasta gamma di eventi, che spaziano da quelli istituzionali alle cerimonie ufficiali,
+                            dalle
+                            manifestazioni culturali
+                            alle occasioni sociali. Che si tratti di eventi
+                            istituzionali solenni,
+                            cerimonie speciali o vibranti manifestazioni, Andreja cattura immagini che raccontano
+                            storie
+                            visive emozionanti e
+                            durature.
+                        </p>
+                    </a>
+                </li>
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <picture class="cs-picture">
+                            <source media="(max-width: 600px)" srcset="/assets/img/home/foto-documentario.jpeg">
+                            <source media="(min-width: 601px)" srcset="/assets/img/home/foto-documentario.jpeg">
+                            <img loading="lazy" decoding="async" src="/assets/img/home/foto-documentario.jpeg"
+                                alt="cleaner" width="413" height="240" aria-hidden="true">
+                        </picture>
+                        <h3 class="cs-h3">Giornalismo</h3>
+                        <p class="cs-item-text">
+                            Specializzata nella realizzazione di reportage
+                            internazionali che raccontano storie complesse
+                            provenienti da diverse parti del mondo, attraverso l'esperienza diretta sul campo,
+                            Andreja
+                            documenta i conflitti, le
+                            crisi umanitarie e le sfide globali che affliggono le comunità vulnerabili. I suoi
+                            reportage
+                            combinano immagini potenti
+                            e narrazioni coinvolgenti per creare una comprensione più profonda dei problemi globali
+                            e
+                            per sensibilizzare l'opinione
+                            pubblica.
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
+
+    <section class="new-services commented-out">
+        <div class="custom-shape-divider-top-1682008701">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container-fluid h-100">
+            <div class="services-title">
+                <h2>Servizi professionali</h2>
+            </div>
+            <div class="flex-container h-100 group-services">
+                <div class="flex-items">
+
+                </div>
+                <div class="flex-items">
+                    <ul>
+                        <li class="servizio">
+                            <h4 class="servizio-title">Conferenze</h4>
+                            <p>
+                                Andreja Restek è una fonte autorevole nell'era dell'informazione digitale.
+                                I
+                                suoi interventi offrono una panoramica sulle tecniche di indagine giornalistica,
+                                l'importanza della ricerca accurata e
+                                l'etica nel reportage.
+                                Con la sua vasta esperienza nel giornalismo investigativo e nella testimonianza
+                                umanitaria,
+                                Andreja fornisce discorsi
+                                coinvolgenti e informativi su temi quali il terrorismo, i conflitti globali e i diritti
+                                umani.
+                            </p>
+                        </li>
+                        <li class="servizio">
+                            <h4 class="servizio-title">Eventi</h4>
+                            <p>
+                                Grazie alla sua ampia esperienza nel campo dei servizi fotografici, Andreja Restek offre
+                                la
+                                sua professionalità per una
+                                vasta gamma di eventi, che spaziano da quelli istituzionali alle cerimonie ufficiali,
+                                dalle
+                                manifestazioni culturali
+                                alle occasioni sociali. Che si tratti di eventi
+                                istituzionali solenni,
+                                cerimonie speciali o vibranti manifestazioni, Andreja cattura immagini che raccontano
+                                storie
+                                visive emozionanti e
+                                durature.
+                            </p>
+                        </li>
+                        <li class="servizio">
+                            <h4 class="servizio-title">Giornalismo</h4>
+                            <p>Specializzata nella realizzazione di reportage
+                                internazionali che raccontano storie complesse
+                                provenienti da diverse parti del mondo, attraverso l'esperienza diretta sul campo,
+                                Andreja
+                                documenta i conflitti, le
+                                crisi umanitarie e le sfide globali che affliggono le comunità vulnerabili. I suoi
+                                reportage
+                                combinano immagini potenti
+                                e narrazioni coinvolgenti per creare una comprensione più profonda dei problemi globali
+                                e
+                                per sensibilizzare l'opinione
+                                pubblica.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!---------- Section Galleria Link ----------->
     <section class="section-gallery">
+        <div class="custom-shape-divider-top-1682691974">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
 
         <div class="gallery-image-text-container">
             <h2>Le foto</h2>
 
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, eveniet! Ullam ipsum consequuntur
-                harum reprehenderit quisquam labore voluptas eos sit illum.</p>
-
-            <!-- <a href="/pages/gallery/">
-                <button class="my-button button-style" id="cta">
-                    <div class="button-bg button-bg-body"></div>
-                    <span>Sfoglia la galleria</span>
-                </button>
-            </a> -->
+            <p>In questa galleria fotografica, Andreja condivide i frammenti di realtà che ha catturato nel corso dei
+                suoi viaggi.
+                Dalla cruda verità dei conflitti alla speranza dell'umanità, ogni foto racconta una storia unica e
+                potente.</p>
 
             <a class="fancy" href="/pages/gallery/"> <span class="top-key"></span>
                 <span class="text">Sfoglia la galleria</span>
@@ -308,18 +745,17 @@
         <div class="fine-art-image-text-container">
             <h2>La Fine Art</h2>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae corrupti eum adipisci nobis
-                accusantium excepturi, nostrum rerum ducimus animi ipsam eligendi neque commodi totam cum vero amet
-                velit doloribus. Itaque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas
-                corporis ab consectetur non velit accusantium. In error debitis ratione est, itaque vero nulla dolore
-                quis ea, voluptates excepturi voluptatem.</p>
-
-            <!-- <a href="/pages/gallery/">
-                <button class="my-button button-style" id="cta">
-                    <div class="button-bg button-bg-body"></div>
-                    <span>Sfoglia la galleria</span>
-                </button>
-            </a> -->
+            <p>
+                Una collezione di fotografie d'autore di Andreja Restek. In questa sezione, ogni
+                immagine diventa
+                un'opera d'arte impegnata, dove l'estetica incontra la crudezza della realtà. Attraverso l'obiettivo
+                della sua macchina
+                fotografica, Andreja trasforma luoghi segnati dai conflitti globali in opere che toccano il cuore.
+                Scopri l'abilità di
+                Andreja nel trovare la bellezza nascosta anche nella crudeltà della vita, donando valore e profondità
+                all'arte
+                fotografica.
+            </p>
 
             <a class="fancy fancy-invert" href="/pages/gallery/"> <span class="top-key"></span>
                 <span class="text">Scopri la selezione</span>
@@ -331,84 +767,562 @@
     </section>
 
     <!------------ Section riconoscimenti ------------>
-    <section class="section-premi">
 
-        <div class="image-premi" data-aos="fade-up"></div>
+    <section class="award-section">
+        <div class="award-layout">
+            <div class="award-box" id="award1">
 
-        <div class="premi-title">
-            <h2>Premi e riconoscimenti</h2>
+                <i class="award-icon fa-solid fa-award"></i>
+
+                <div class="award-number text-center">
+                    <p class="award-nbr" id="nbr1">15</p>
+                </div>
+                <div class="award-description text-center">
+                    <p>Premi e <br> Riconoscimenti
+                    </p>
+                </div>
+            </div>
+
+            <div class="award-box" id="award2">
+
+                <i class="award-icon fa-solid fa-earth-americas"></i>
+                <div class="award-number text-center">
+                    <p class="award-nbr" id="nbr2">20</p>
+                </div>
+                <div class="award-description text-center">
+                    <p>Paesi visitati
+                    </p>
+                </div>
+            </div>
+
+            <div class="award-box" id="award3">
+
+                <i class="award-icon fa-solid fa-camera-retro"></i>
+                <div class="award-number text-center">
+                    <p class="award-nbr" id="nbr3">50000</p>
+                </div>
+                <div class="award-description text-center">
+                    <p>Foto scattate
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galleria-collage-section">
+
+        <div class="galleria-container">
+            <div class="gallleria-titolo">
+
+                <div class="galleria-text-box pt-5 pb-5">
+
+                    <div class="galleria-text-box-1 ff">
+                        <p>
+                            "Non ci è dovuto niente, né storia, né foto, né niente.
+                            Questo è l’ultimo bene che loro
+                            ci danno e noi dobbiamo essere rispettosi, anche nei confronti di coloro che leggono
+                            e guardano le foto."
+                        </p>
+                    </div>
+
+                    <div class="galleria-text-box-2 ff">
+                        <p>
+                            Nelle zone di conflitto, il suo ruolo è delicato: testimoniare le storie di coloro che
+                            lottano, soffrono e sperano.
+                            Questa missione richiede integrità, rispetto e un'impeccabile capacità di catturare
+                            l'essenza della condizione umana. La
+                            sua opera diventa una potente testimonianza del coraggio e della resilienza di chi vive in
+                            queste circostanze
+                            strazianti.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="big-gallery-container">
+
+                <div class="galleria-collage-container">
+
+                    <div class="area area-1"></div>
+                    <div class="area area-2"></div>
+                    <div class="area area-3"></div>
+                    <div class="area area-4"></div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="linegrow mt-5 mb-4"></div>
+
+
+    <section class="section-recognition">
+        <div class="recognition-box">
+            <div class="recognition-title">
+                <h2>Riconoscimenti</h2>
+            </div>
+            <div class="recognition-lead">
+                <p>La carriera di Andreja Restek nel giornalismo e fotoreportage è stata costellata da numerosi premi e
+                    riconoscimenti,
+                    attestando la sua dedizione e impegno nel documentare i fenomeni globali. Attraverso mostre
+                    fotografiche ed eventi di prestigio, il suo lavoro ha ricevuto apprezzamenti dalla comunità
+                    giornalistica e umanitaria.</p>
+            </div>
+        </div>
+        <div class="awards-box">
+
+            <ul class="awards-list">
+                <li>
+                    <p>
+                        Premio Internazionale di Giornalismo Vitaliano Brancati - 2006
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Torino - Donna fotografa dell’anno - 2014
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Torino - Donna fotografa dell’anno - 2015
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Premio Internazionale di Giornalismo Vitaliano Brancati - 2017
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Medaglia del Presidente della Repubblica per la mostra Exodos - 2018
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Premio “Premio Civitas in Europa” - Sezione Terrorismo e Rifugiati - Ass.Ande - 2019
+                    </p>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section class="section-riconoscimenti mt-5 mb-5 commented-out">
+
+        <div class="riconoscimenti-container">
+
+            <div class="riconoscimenti-testo">
+                <h2>Premi</h2>
+                <ul>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Premio Internazionale di Giornalismo Vitaliano Brancati 2006
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Torino - Donna fotografa dell’anno 2014
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Torino - Donna fotografa dell’anno 2015
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Premio Internazionale di Giornalismo Vitaliano Brancati 2017
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Medaglia del Presidente della Repubblica per la mostra Exodos 2018
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Premio “Premio Civitas in Europa” - Sezione Terrorismo e Rifugiati - Ass.Ande 2019
+                    </li>
+                </ul>
+            </div>
+
+            <div class="riconoscimenti-foto-container">
+                <img src="/assets/img/home/premio-civitas-2019-2.png" class="img-fluid rounded-4" alt="">
+            </div>
         </div>
 
-        <div class="premi-wrapper">
+        <div class="linegrow mt-5 mb-4"></div>
 
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
+        <div class="riconoscimenti-container">
 
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <!-- <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
-            </div>
-
-            <div class="premi-element">
-                <div class="icon-container">
-                    <i class="fa-solid fa-award"></i>
-                </div>
-                <h4>Lorem ipsum</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod vero fuga tempora dolore.</p>
+            <!-- <div class="riconoscimenti-foto-container">
+                <img src="/assets/img/home/premio-exodos.jpeg" class="img-fluid rounded-4" alt="">
             </div> -->
+
+            <div class="riconoscimenti-testo-2">
+
+                <h2 class="pb-4">Mostre</h2>
+
+                <div class="mostre-container">
+                    <div class="mostre-1">
+                        <ul>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                In Prima Linea, Donne fotoreporter in guerra - Palazzo Madama - Torino, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Shamal soffia su Torino - Polo del 900 - Torino, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Infanzia Rubata
+                                Andreja Restek con Lewis W. Hine - Polo del 900 Torino, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Mostra collettiva Exodos
+                                Premiata dal Presidente della Repubblica con la medaglia d’oro
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Mostra collettiva Exodos - Parlamento Europeo , Bruxelles
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Diario dal mondo - Pino Torinese, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                “Il coraggio delle donne” - San Salvario, Torino, Italia
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="mostre-2">
+                        <ul>
+
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Giornata Mondiale del Rifugiato
+                                Centro Interculturale, Museo della Resistenza - Torino, Italia
+                            </li>
+
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                “Il corpo-lavoro" - Campus Luigi Einaudi di Torino, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Dallo Shaleku allo Zwai (Etiopia) - Mausoleo della Bella Rosin Torino, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Siria - Urban Center Metropolitano Torino
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Università di Pavia - Pavia, Italia
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Aleppo Photo Festival 2015 - Syria
+                            </li>
+                            <li> <i class="fal fa ra fa-angle-right"></i>
+                                Mostra a Pechino - Zooming in on Covid-19 - Unforgettable moments in the global fight
+                                against
+                                the pandemic” - Cina
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="linegrow mt-5 mb-4"></div>
+
+        <div class="riconoscimenti-container">
+
+            <div class="riconoscimenti-foto-container">
+                <img src="/assets/img/home/premio-exodos.jpeg" class="img-fluid rounded-4" alt="">
+            </div>
+
+            <div class="riconoscimenti-testo">
+                <h2>Certificati</h2>
+                <ul>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        “Environmental Security and Sustaining Peace” SDG Academy -UN environmental
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Terrorism and counterterrorism Comparing Theory and Practice - University Leiden
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Introduction - Terrorism and counterterrorism - Georgetown University
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Understand the origins of Crime - Griffith University
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Le Nuove vie del giornalismo: America e Europa al confronto - ODG
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Medio Oriente, Europa, Italia tra politica e giornalismo - ODG
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Digital video journalism - ODG
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Geopolitica della liberà di stampa
+                    </li>
+                    <li> <i class="fal fa ra fa-angle-right"></i>
+                        Corso di formazione Reuters
+                    </li>
+
+                </ul>
+            </div>
+
 
         </div>
 
     </section>
 
+
+    <!-- Scopri altro che rimanda all'about page -->
+
+    <section class="section-more-about mb-5 commented-out">
+
+        <div class="more-about-flex more-about-link-container">
+            <p>Guarda la lista completa delle certificazioni e premi ricevute da Andreja nel corso della sua carriera
+            </p>
+            <a href="/pages/articles/">
+                <button class="my-button button-style">
+                    <div class="button-bg"></div>
+                    <span>Scopri di più</span>
+                </button>
+            </a>
+        </div>
+
+        <div class="more-about-flex more-about-photo-container">
+
+        </div>
+
+    </section>
+
+    <!-- Alternativa che rimanda all'about page -->
+    <section class="section-gallery-2">
+
+        <div class="gallery-image-text-container">
+            <h2>La carriera e i premi</h2>
+
+            <p>
+                Qui potrai trovare la lista completa delle collaborazioni, le mostre, i premi e i riconoscimenti
+                ottenuti
+                da Andreja nel corso della sua lunga esperienza professionale.
+            </p>
+
+            <a class="fancy fancy-invert" href="/pages/articles/"> <span class="top-key"></span>
+                <span class="text">Scopri di più</span>
+                <span class="bottom-key-1"></span>
+                <span class="bottom-key-2"></span>
+            </a>
+        </div>
+
+        <div class="gallery-image-container">
+            <div class="gallery-image-2" data-aos="fade-left"></div>
+        </div>
+
+    </section>
+
+
+    <!-- contact us -->
+
+    <div class="container-contact100" id="contact-form">
+
+        <img src="/assets/img/icons/paper-plane-svgrepo-com.svg" alt="mail paperplane" class="paperplane">
+
+        <div class="wrap-contact100">
+            <form class="contact100-form validate-form">
+                <span class="contact100-form-title">
+                    mettiti in contatto <br>
+                    con Andreja Restek
+
+                </span>
+                <div class="wrap-input100 validate-input alert-validate" data-validate="Please enter your name">
+                    <input class="input100" type="text" name="name" placeholder="Nome Cognome">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input alert-validate" data-validate="Please enter your email: e@a.x">
+                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input alert-validate" data-validate="Inserisci un oggetto">
+                    <input class="input100" type="text" name="Oggetto" placeholder="Oggetto della mail">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input alert-validate"
+                    data-validate="Inserisci qui il tuo messaggio...">
+                    <textarea class="input100" name="message"
+                        placeholder="Inserisci qui il tuo messaggio..."></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <button class="my-button button-style">
+                        <div class="button-bg"></div>
+                        <span>&nbsp;&nbsp;Invia&nbsp;&nbsp;</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- INFINITE SCROLL LOGOS -->
+    <div class="scroll-section mt-5">
+        <div class="container-fluid text-center p-3 collab-container">
+            <p class="collab">Ha collaborato con:</p>
+        </div>
+
+        <div class="infinite-scroll-container">
+
+            <article class="wrapper">
+                <div class="marquee">
+                    <div class="marquee__group">
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Stampa.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/ansa-2.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/El Pais.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/HuffPost.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/il-fatto-quotidiano.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/io-donna-logo-vector.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Repubblica.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/Sky-news-logo.svg" />
+                        </svg>
+                    </div>
+
+                    <div aria-hidden="true" class="marquee__group">
+                        <svg class="svg-center">
+                            <image xlink:href="assets/img/logo/La_Stampa.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/ansa-2.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/El Pais.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/HuffPost.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/il-fatto-quotidiano.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/io-donna-logo-vector.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Repubblica.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/Sky-news-logo.svg" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="marquee marquee--reverse">
+                    <div class="marquee__group">
+                        <svg>
+                            <image xlink:href="assets/img/logo/Sky-news-logo.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Repubblica.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/HuffPost.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/il-fatto-quotidiano.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/io-donna-logo-vector.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/ansa-2.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/El Pais.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Stampa.svg" />
+                        </svg>
+                    </div>
+
+                    <div aria-hidden="true" class="marquee__group">
+                        <svg>
+                            <image xlink:href="assets/img/logo/Sky-news-logo.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Repubblica.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/HuffPost.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/il-fatto-quotidiano.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/io-donna-logo-vector.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/ansa-2.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/El Pais.svg" />
+                        </svg>
+                        <svg>
+                            <image xlink:href="assets/img/logo/La_Stampa.svg" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <symbol id="mcdonalds" viewBox="0 0 24 24">
+                        <path
+                            d="M17.243 3.006c2.066 0 3.742 8.714 3.742 19.478H24c0-11.588-3.042-20.968-6.766-20.968-2.127 0-4.007 2.81-5.248 7.227-1.241-4.416-3.121-7.227-5.231-7.227C3.031 1.516 0 10.888 0 22.476h3.014c0-10.763 1.658-19.47 3.724-19.47 2.066 0 3.741 8.05 3.741 17.98h2.997c0-9.93 1.684-17.98 3.75-17.98Z" />
+                    </symbol>
+
+                    <symbol id="jordan" viewBox="0 0 24 24">
+                        <path
+                            d="M13.55 2.194v-.075c0-.35.113-.663.338-.938.225-.275.512-.412.862-.412s.663.112.938.337.425.525.45.9c.025.375-.088.688-.338.938s-.55.375-.9.375l-.225.075.075.112-.075.413-.15 1.2c.05.05.075.1.075.15l-.15.75c-.05.1-.1.175-.15.225l-.075.3a22.59 22.59 0 01-.45 1.575v.15c-.05.25-.087.45-.112.6-.025.15-.113.4-.263.75-.1.2-.1.525 0 .975l.075.075c0 .15.063.325.188.525s.187.375.187.525c.05 1-.025 1.85-.225 2.55l.15.45c.6.3.775.625.525.975l.375.15c.6.3 1.025.562 1.275.787.25.225.5.463.75.713.2.05.35.125.45.225l.225.075c1.05.7 2.1 1.55 3.15 2.55l.3.225v.075l-.075.15.225.15h.075c.15.1.25.15.3.15h.075c.05 0 .1-.025.15-.075l.15-.075c.1-.1.2-.175.3-.225h.3c.05 0 .05.025 0 .075l-.3.15-.375.45h.525l.525.075c.15-.05.275-.1.375-.15l.375-.225c.15-.05.3 0 .45.15h.075c.05.05.025.125-.075.225l-.9.825c-.25.2-.475.325-.675.375l-.975.675c-.05.05-.1.05-.15 0l-.225-.3-.15-.3-.188-.263-.225-.3-.187-.225-.15-.187-.3-.225c-.1 0-.2-.025-.3-.075l-.975-.75c-.15 0-.325-.075-.525-.225-.75-.65-1.25-1.05-1.5-1.2l-.45-.3-.9-.15c-.3-.05-.7-.2-1.2-.45l-.6-.3c-.4-.2-.675-.3-.825-.3l-.3-.15c-.2-.05-.35-.1-.45-.15l-.15-.15c-.1 0-.2.025-.3.075l-1.5.75-1.875.825c-.5.4-.975.725-1.425.975l-.825.375-1.275.9c-.1.1-.2.1-.3 0l-.15.15c-.15.05-.25.075-.3.075l-.3.15v.15H3.2l-.15.225c-.1.2-.2.312-.3.337-.1.025-.162.063-.187.113a.434.434 0 01-.075.112l-.15.15-.225.15-.338-.037-.45.075-.3.075c-.25.05-.45.012-.6-.113-.15-.125-.275-.312-.375-.562-.1-.15-.05-.275.15-.375l.075-.075c.05-.05.125-.075.225-.075h.45l.6-.225.3-.075c0-.1.025-.175.075-.225.05-.05.125-.075.225-.075v-.075a.666.666 0 01-.075-.3c-.05-.1-.063-.175-.037-.225.025-.05.05-.075.075-.075h.037l.075.225c.05.25.125.325.225.225l.075-.15c.05-.1.125-.15.225-.15l.15.15.15-.15-.075-.075c0-.05.025-.075.075-.075l.3-.3c.25-.3.55-.575.9-.825.7-.55 1.45-.975 2.25-1.275.25-.25.525-.375.825-.375.2-.35.5-.725.9-1.125.35-.25.6-.425.75-.525.1-.2.225-.3.375-.3h.075l.15-.15c.1-.05.175-.1.225-.15v-.375c0-.25.025-.45.075-.6.05-.15.175-.225.375-.225l.3-.3c-.1-.2-.15-.425-.15-.675h-.075c-.1-.15-.15-.3-.15-.45-.15-.25-.25-.45-.3-.6H9.65c-.05.15-.175.25-.375.3l-.075.15c-.2.35-.375.612-.525.787-.15.175-.425.388-.825.638-.25.25-.425.525-.525.825-.05.15-.05.3 0 .45l-.075.15h.075c0 .1.025.15.075.15h.075c.1.05.15.112.15.187s-.075.1-.225.075a.606.606 0 01-.337-.15c-.075-.075-.138-.112-.188-.112l-.225.225c-.1.15-.2.212-.3.187-.1-.025-.125-.062-.075-.112l.075-.075c.05-.1.05-.15 0-.15l-.6.15c-.05.05-.112.05-.187 0s-.063-.1.037-.15l.375-.15c0-.05-.025-.075-.075-.075-.2.1-.4.125-.6.075l-.375-.075-.075-.075c0-.05.025-.075.075-.075.2.05.45.025.75-.075l.525-.225.6-.675.075-.15c.2-.4.413-.763.638-1.088a3.68 3.68 0 01.712-.787l.075-.3c.1-.2.2-.375.3-.525.1-.15.225-.35.375-.6l.225-.3c.2-.3.425-.45.675-.45l.225-.225c.05-.05.075-.125.075-.225l.15-.15-.075-.075c-.3-.25-.45-.475-.45-.675-.05-.35.063-.65.338-.9s.55-.363.825-.338c.275.025.487.113.637.263l.15.15c.05 0 .075.025.075.075l.3.15v.225c.1.1.15.175.15.225.1-.15.25-.325.45-.525l.375-1.2c0-.2.05-.4.15-.6l.15-.225v-.15l.225-.9h.15l.225-.9a.933.933 0 000-.525l-.3-.75-.15-.6z" />
+                    </symbol>
+
+                    <symbol id="aws" viewBox="0 0 24 24">
+                        <path
+                            d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z" />
+                    </symbol>
+
+                    <symbol id="spotify" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+                    </symbol>
+
+                    <symbol id="burger-king" viewBox="0 0 24 24">
+                        <path
+                            d="M15.39 12.614c-.72 0-1.11.538-1.11 1.215v1.508c0 .125-.043.182-.12.182-.056 0-.098-.035-.147-.133l-.971-1.885c-.37-.72-.755-.887-1.196-.887-.734 0-1.14.552-1.14 1.243v4.314c0 .678.392 1.215 1.112 1.215.72 0 1.112-.537 1.112-1.215v-1.507c0-.126.042-.182.119-.182.055 0 .097.035.146.133l.972 1.885c.37.719.769.886 1.195.886.735 0 1.14-.551 1.14-1.242v-4.315c0-.677-.391-1.215-1.111-1.215zm-4.02-.405c.364 0 .68-.286.68-.642 0-.238-.099-.412-.224-.572-.203-.266-.385-.496-.476-.74-.02-.056-.007-.105.056-.154.217-.167.469-.537.469-1.124 0-.886-.734-1.389-1.622-1.389h-.79c-.553 0-.819.321-.819.754v3.114c0 .419.245.754.692.754.448 0 .693-.335.693-.754v-.74c0-.09.042-.133.111-.133.084 0 .112.049.126.133.063.356.23.837.42 1.082.237.314.46.411.685.411zm-1.146-2.666h-.098c-.119 0-.175-.07-.175-.161v-.474c0-.09.056-.16.175-.16h.098c.294 0 .385.208.385.39 0 .174-.091.405-.385.405zm-3.761 2.666c1.132 0 1.734-.677 1.734-1.528V8.328c0-.419-.245-.754-.692-.754-.448 0-.693.335-.693.754v2.276c0 .167-.097.363-.35.363-.251 0-.335-.196-.335-.363V8.328c0-.419-.252-.754-.7-.754-.447 0-.691.335-.691.754v2.353c0 .852.594 1.528 1.727 1.528zm12.011-.034c.392 0 .7-.23.7-.65 0-.412-.308-.642-.7-.642h-.63c-.118 0-.174-.07-.174-.16v-.133c0-.091.056-.161.175-.161h.482c.336 0 .602-.202.602-.559 0-.355-.266-.558-.602-.558h-.482c-.12 0-.175-.07-.175-.16V9.04c0-.091.056-.161.175-.161h.629c.392 0 .7-.23.7-.65 0-.411-.308-.642-.7-.642h-1.321c-.553 0-.818.321-.818.754v3.079c0 .432.265.754.818.754h1.321zm2.642 3.127h-.342c-.615 0-1.09.286-1.09.914 0 .573.517.845.901.845.189 0 .322.056.322.202 0 .182-.224.3-.462.3-.79 0-1.328-.537-1.328-1.535 0-1.11.734-1.515 1.3-1.515.692 0 .804.349 1.287.349a.927.927 0 0 0 .936-.915.95.95 0 0 0-.398-.788c-.427-.315-1.07-.545-1.979-.545-1.629 0-3.216 1.026-3.216 3.414 0 2.282 1.587 3.35 3.153 3.35 1.643 0 2.685-1.012 2.685-2.492 0-.935-.587-1.584-1.769-1.584zm-12.43-2.688c-.783 0-1.21.587-1.21 1.32v4.132c0 .734.427 1.32 1.21 1.32.783 0 1.21-.586 1.21-1.32v-4.132c0-.733-.427-1.32-1.21-1.32zm11.494-.405c.447 0 .692-.335.692-.754v-.74c0-.09.042-.132.112-.132.084 0 .111.049.125.133.063.355.231.837.42 1.082.238.314.461.412.685.412.363 0 .678-.286.678-.643 0-.237-.098-.412-.224-.572-.237-.3-.384-.496-.475-.74-.02-.056-.007-.105.056-.153.217-.168.469-.538.469-1.124 0-.887-.735-1.39-1.623-1.39h-.79c-.552 0-.817.321-.817.754v3.114c0 .419.244.753.692.753zm.615-3.301c0-.09.056-.161.175-.161h.098c.293 0 .384.21.384.391 0 .175-.09.405-.384.405h-.098c-.12 0-.175-.07-.175-.16zm-18.87 3.267h.986c.93 0 1.496-.622 1.496-1.397 0-.621-.37-.907-.454-.977-.035-.028-.07-.056-.07-.084 0-.035.021-.048.056-.09.133-.154.266-.398.266-.754 0-.838-.567-1.285-1.448-1.285h-.832c-.552 0-.817.321-.817.754v3.079c0 .433.265.754.817.754zm.413-3.386c0-.09.056-.16.175-.16h.09c.301 0 .392.209.392.39 0 .168-.09.405-.391.405h-.091c-.12 0-.175-.07-.175-.16zm0 1.634c0-.091.056-.161.175-.161h.126c.335 0 .433.223.433.426 0 .181-.098.44-.433.44h-.126c-.12 0-.175-.07-.175-.161zm11.878 1.794c1.098 0 1.79-.699 1.79-1.718 0-.649-.391-1.096-1.174-1.096h-.224c-.413 0-.734.196-.734.636 0 .39.342.58.601.58.133 0 .217.041.217.139 0 .125-.147.21-.315.21-.524 0-.88-.37-.88-1.062 0-.768.489-1.047.866-1.047.462 0 .539.238.86.238.37 0 .623-.308.623-.629a.669.669 0 0 0-.266-.544c-.294-.217-.706-.377-1.321-.377-1.084 0-2.14.712-2.14 2.36 0 1.576 1.056 2.31 2.097 2.31zm-8.718 3.762a.354.354 0 0 1-.07-.188c0-.077.042-.133.126-.21.196-.181.678-.635.944-1.047.202-.314.286-.6.286-.837 0-.607-.552-1.082-1.153-1.082-.385 0-.748.216-.993.614-.329.53-.72 1.145-.972 1.39-.063.062-.098.076-.146.076-.084 0-.12-.056-.12-.146v-.699c0-.684-.405-1.235-1.139-1.235-.74 0-1.14.551-1.14 1.235v4.3c0 .685.399 1.237 1.14 1.237.734 0 1.14-.552 1.14-1.236v-.991c0-.084.035-.147.119-.147.111 0 .14.112.167.168.161.384.63 1.2 1.063 1.682.294.32.657.524 1.042.524.65 0 1.196-.566 1.196-1.173 0-.377-.161-.657-.469-.991-.392-.427-.853-.986-1.021-1.244zm15.751 6.702C19.432 23.707 16.313 24 12 24c-4.313 0-7.432-.293-9.25-1.32-1.09-.614-1.642-1.451-1.642-2.052 0-.342.181-.537.587-.537h20.61c.406 0 .587.195.587.537 0 .6-.552 1.438-1.643 2.053zm1.056-15.917H1.695c-.406 0-.587-.209-.587-.586C1.108 3.944 4.47 0 12 0c7.46 0 10.892 3.944 10.892 6.178 0 .377-.181.586-.587.586Z" />
+                    </symbol>
+
+                    <symbol id="honda" viewBox="0 0 24 24">
+                        <path
+                            d="M23.902 6.87c-.33-3.218-2.47-3.895-4.354-4.204-.946-.16-2.63-.3-3.716-.34-.946-.06-3.168-.09-3.835-.09-.657 0-2.89.03-3.835.09-1.076.04-2.77.18-3.716.34C2.563 2.985.42 3.66.092 6.87c-.08.877-.1 2.023-.09 3.248.03 2.031.2 3.406.3 4.363.07.657.338 2.62.687 3.636.478 1.395.916 1.803 1.424 2.222.937.757 2.471.996 2.79 1.056 1.733.31 5.24.368 6.784.368 1.544 0 5.05-.05 6.784-.368.329-.06 1.863-.29 2.79-1.056.508-.419.946-.827 1.424-2.222.35-1.016.628-2.979.698-3.636.1-.957.279-2.332.299-4.363.04-1.225.01-2.371-.08-3.248m-1.176 5.4c-.19 2.57-.418 4.104-.747 5.22-.29.976-.637 1.623-1.165 2.092-.867.787-2.063.956-2.76 1.056-1.514.23-4.055.3-6.057.3-2.002 0-4.543-.08-6.057-.3-.697-.1-1.893-.269-2.76-1.056-.518-.469-.876-1.126-1.155-2.093-.329-1.105-.558-2.65-.747-5.22-.11-1.543-.09-4.054.08-5.4.258-2.011 1.255-3.018 3.387-3.396.996-.18 2.34-.31 3.606-.37 1.016-.07 2.7-.1 3.636-.09.936-.01 2.62.03 3.636.09 1.275.06 2.61.19 3.606.37 2.142.378 3.139 1.395 3.388 3.397.199 1.345.229 3.856.11 5.4m-5.202-8.39c-.548 2.462-.767 3.588-1.216 5.37-.428 1.715-.767 3.298-1.335 4.065-.587.777-1.365.947-1.893 1.006-.279.03-.478.04-1.066.05-.596 0-.796-.02-1.075-.05-.528-.06-1.315-.229-1.892-1.006-.578-.767-.907-2.35-1.335-4.064-.47-1.773-.678-2.91-1.236-5.37 0 0-.548.02-.797.04-.329.02-.588.05-.867.09.343 5.372.692 11.079 1.126 16.13a21.983 21.983 0 002.39.169c.33-1.266.748-3.02 1.207-3.767.378-.608.966-.677 1.295-.717.518-.07.956-.08 1.165-.08.2-.01.637 0 1.165.08.33.05.917.11 1.295.717.47.747.877 2.5 1.206 3.766 0 0 .358-.01 1.165-.05.41-.018.82-.058 1.226-.12.458-5.39.785-10.728 1.126-16.128-.28-.04-.538-.07-.867-.09-.23-.02-.787-.04-.787-.04z" />
+                    </symbol>
+
+                    <symbol id="notion" viewBox="0 0 24 24">
+                        <path
+                            d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+                    </symbol>
+
+                    <symbol id="hulu" viewBox="0 0 24 24">
+                        <path
+                            d="M14.707 15.957h1.912V8.043h-1.912zm-3.357-2.256a.517.517 0 01-.512.511H9.727a.517.517 0 01-.512-.511v-3.19H7.303v3.345c0 1.368.879 2.09 2.168 2.09h1.868c1.189 0 1.912-.856 1.912-2.09V10.51h-1.912c.01 0 .01 3.09.01 3.19zm10.75-3.19v3.19a.517.517 0 01-.512.511h-1.112a.517.517 0 01-.511-.511v-3.19h-1.912v3.345c0 1.368.878 2.09 2.167 2.09h1.868c1.19 0 1.912-.856 1.912-2.09V10.51zm-18.32 0H2.557c-.434 0-.645.11-.645.11V8.044H0v7.903h1.9v-3.179c0-.278.234-.511.512-.511h1.112c.278 0 .511.233.511.511v3.19h1.912v-3.446c0-1.445-.967-2-2.167-2Z" />
+                    </symbol>
+                </defs>
+            </svg>
+        </div>
+
+    </div>
 
     <!-- <section class="container-fluid panel">
         <div class="row justify-content-center align-content-center">
@@ -482,50 +1396,151 @@
             data-aos-easing="ease-in-cubic" -->
 
     </div>
-    </div> -->
+    </div>
 
-    <!-- <div class="ciao"></div> -->
+    <!-- FOOTER -->
 
+    <footer class="text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="footer-section col-md-5 col-lg-5 col-xl-5 mx-auto mt-3">
 
-    <footer class="footer-container">
+                        <img src="/assets/img/logo/andreja-signature-white.png" width="150px" alt="logo">
 
-        <div class="footer-column column-details mborder">
-            <img src="/assets/img/logo/andreja-signature.png" width="160" alt="logo">
-            <h4>Andreja Restek</h4>
-            <p>Giornalista e fotografa</p>
+                        <h5 class="text-uppercase my-3 font-weight-bold">
+                            Andreja Restek
+                        </h5>
+                        <p>
+                            Giornalista e fotoreporter. Voce globale del giornalismo investigativo e della testimonianza
+                            umanitaria.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- <hr class="w-100 clearfix d-lg-none" /> -->
+
+                    <!-- Grid column -->
+                    <!-- <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                        <p>
+                            <a class="text-white">MDBootstrap</a>
+                        </p>
+                        <p>
+                            <a class="text-white">MDWordPress</a>
+                        </p>
+                        <p>
+                            <a class="text-white">BrandFlow</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Bootstrap Angular</a>
+                        </p>
+                    </div> -->
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-lg-none" />
+
+                    <!-- Grid column -->
+                    <div class="footer-section footer-links col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">
+                            Links
+                        </h6>
+                        <p>
+                            <a class="text-white footer-link" href="/index.html">Home</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/gallery/">Galleria</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/fine-art/">Fine Art</a>
+                        </p>
+                        <p>
+                            <a class="text-white footer-link" href="/pages/articles/">About</a>
+                        </p>
+
+                    </div>
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-lg-none" />
+
+                    <!-- Grid column -->
+                    <div class="footer-section footer-contact .col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contatti</h6>
+                        <p><i class="fa-solid fa-location-dot me-2 mb-1 "></i> Torino, Italia</p>
+                        <p><i class="fas fa-envelope me-2 mb-1 "></i> andrejarestek@gmail.com</p>
+                        <p><i class="fas fa-phone me-2 mb-2 "></i> + 39 347 567 88</p>
+
+                        <a href="/pages/contacts/">
+                            <button class="my-button button-style">
+                                <div class="button-bg"></div>
+                                <span>Contattami</span>
+                            </button>
+                        </a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="footer-section p-3 pt-0">
+                <div class="row d-flex align-items-center">
+                    <!-- Grid column -->
+                    <div class="col-md-7 col-lg-8 text-center text-md-start">
+                        <!-- Copyright -->
+                        <div class="p-3">
+                            © 2023 Copyright:
+                            Andreja Restek
+                        </div>
+                        <!-- Copyright -->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <!-- Facebook -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-facebook-f"></i></a>
+
+                        <!-- Twitter -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-twitter"></i></a>
+
+                        <!-- Google -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-google"></i></a>
+
+                        <!-- Instagram -->
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+            </section>
+            <!-- Section: Copyright -->
         </div>
-
-        <div class="footer-column column-browse mborder">
-            <h4>Browse</h4>
-            <ul>
-                <li>Home</li>
-                <li>Galleria</li>
-                <li>Fine Art</li>
-                <li>Su di me</li>
-                <li>Contatti</li>
-            </ul>
-        </div>
-
-        <div class="footer-column column-services mborder">
-            <h4>Servizi</h4>
-            <ul>
-                <li>lorem</li>
-                <li>ipsum</li>
-                <li>dolor</li>
-                <li>amet</li>
-            </ul>
-        </div>
-
-        <div class="footer-column column-contacts mborder">
-            <h4>Contatti</h4>
-            <ul>
-                <li>Torino, Italia</li>
-                <li>andreja@gmail.com</li>
-                <li>+39 3289876543</li>
-            </ul>
-        </div>
-
+        <!-- Grid container -->
     </footer>
+    <!-- Footer -->
+
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader-container");
+            loader.classList.add("loader-hidden");
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
+
+    </script>
+
 
     <!-- BOOTSTRAP CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -536,9 +1551,15 @@
     <script src="/js/animation-on-scroll.js"></script>
     <script src="/js/typing-animation.js"></script>
     <script src="/js/fade-in.js"></script>
-
+    <script src="/js/number-animation.js"></script>
+    <script src="/js/number-animation-2.js"></script>
+    <script src="/js/number-animation-3.js"></script>
+    <script src="/js/line-animation.js"></script>
     <!-- Lottie Animation -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
 
 </body>
 
