@@ -1641,10 +1641,6 @@ lottie-player {
 
 }
 
-.galleria-collage-section {
-    /* height: 150vh; */
-}
-
 .galleria-collage-container {
     height: 120vh;
     padding: 5%;
@@ -2412,9 +2408,6 @@ textarea.input100 {
 
 /* INFINITE SCROLL LOGOS */
 
-.collab-container {
-    /* background-color: var(--white-background); */
-}
 
 .collab {
     font-weight: bold;
@@ -2513,9 +2506,6 @@ textarea.input100 {
     align-items: center;
 }
 
-svg image {
-    /* width: 100%; */
-}
 
 /* .marquee svg {
     display: grid;
@@ -2681,9 +2671,6 @@ svg image {
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
-    animation-direction: ;
-    animation-fill-mode: ;
-
 }
 
 /* PROVA 2 */
