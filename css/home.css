@@ -246,6 +246,7 @@ body {
 
     .sub-heading-hero .fancy {
         margin-top: 8%;
+        font-size: 12px;
     }
 }
 
@@ -273,13 +274,14 @@ body {
     .sub-heading-hero {
         width: 100%;
         margin-left: 0;
-        margin-bottom: -10%;
+        /* margin-bottom: -10%; */
+        margin-bottom: 3%;
         color: white;
         text-align: center;
     }
 
     .sub-heading-hero .fancy {
-        margin-top: 8%;
+        margin-top: 4%;
         width: 75%;
         padding: 0.75em 1.2em;
     }
