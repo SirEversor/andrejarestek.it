@@ -38,6 +38,19 @@
 </head>
 
 <body>
+
+    <!-- LOADING ANIMATION -->
+    <div class="loader-container loader-hidde">
+        <div class="wrapper-loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+
     <!--------------------   NAVBAR   -------------------->
     <nav class="navbar navbar-expand-lg bg-light fixed-top mt-2 mx-3">
         <div class="container-fluid">
@@ -274,7 +287,16 @@
     </footer>
     <!-- Footer -->
 
+    <script>
+        window.addEventListener("load", () => {
+            const loader = document.querySelector(".loader-container");
+            loader.classList.add("loader-hidden");
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        });
 
+    </script>
 
 
     <!-- BOOTSTRAP CDN -->
