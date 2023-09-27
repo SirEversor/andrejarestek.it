@@ -2,870 +2,138 @@ body {
     background-color: var(--white-background);
 }
 
-.contact-title {
-    padding: 10% 0 3%;
+
+/* ---------- POPUP CARD SETTINGS ---------- */
+
+/* 
+* Design by Robert Mayer:https://goo.gl/CJ7yC8
+*
+*I intentionally left out the line that was supposed to be below the subheader simply because I don't like how it looks.
+*
+* Chronicle Display Roman font was substituted for similar fonts from Google Fonts.
+*/
+
+body {
+    background-color: #fdf1ec;
+}
+
+section {
     padding-top: 100px;
-
-    text-align: center;
 }
 
-.contact-title h2 {
-    font-weight: bold;
-    font-family: "Poppins";
+.wrapper {
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
 }
 
-.contact-container {
-    width: 70%;
-    height: 55vh;
-    margin: auto;
-
-    background-color: rgb(215, 180, 128);
-    border-radius: 30px;
-
-
-    display: flex;
-    flex-direction: column;
+.product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
 }
 
-.contact-info-container {
-
-    padding: 5%;
-
-    background-color: rgb(33, 33, 33);
-    color: white;
-
-    border-radius: 30px 30px 0 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.product-img img {
+    border-radius: 7px 0 0 7px;
 }
 
-.contact-form-container {
-    width: 100%;
-    padding: 5%;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.product-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
 }
 
-/* PARTE SINISTRA */
-.contact-info li {
-    padding-bottom: 10px;
+.product-text {
+    height: 300px;
+    width: 327px;
 }
 
-.contact-info li:first-child {
-    padding-top: 10px;
+.product-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 38px;
+    font-size: 34px;
+    color: #474747;
 }
 
-/* ICONS */
-
-.contact-info .fa {
-    font-size: inherit;
+.product-text h1,
+.product-price-btn p {
+    font-family: 'Bentham', serif;
 }
 
-.contact-info .fa:hover {
-    color: var(--my-orange);
+.product-text h2 {
+    margin: 0 0 38px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
 }
 
-.contact-info-icons .fa {
-    font-size: 2.4rem;
+.product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
 }
 
-.contact-info-icons .fa:hover {
-    color: var(--white-background);
+.product-price-btn {
+    height: 103px;
+    width: 327px;
+    margin-top: 38px;
+    position: relative;
 }
 
-/* PARTE DESTRA */
-/* Styling degli elementi dentro al form */
-
-.input-row {
-    display: flex;
-    justify-content: space-between;
+.product-price-btn p {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    font-family: 'Trocchi', serif;
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
 }
 
-.input-element {
-    margin-bottom: 30px;
+.product-price-btn span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
 }
 
-.form-dati,
-.form-email {
-    flex-basis: 45%;
-    margin-top: 30px;
+.product-price-btn button {
+    float: right;
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #9cebd5;
+    cursor: pointer;
+    outline: none;
 }
 
-input {
-    width: 100%;
-}
-
-.input-row:last-child {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.input-button {
-    justify-content: center;
-}
-
-
-/* Styling per mobile */
-
-@media screen and (min-width: 800px) {
-
-    .contact-container {
-        flex-direction: row;
-    }
-
-    .contact-info-container {
-        width: 65%;
-
-        border-radius: 30px 0 0 30px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-
-    .contact-container {
-        height: auto;
-        width: 85%;
-    }
-
-    /* PARTE IN ALTO */
-
-    .contact-info-title h3 {
-        text-align: center;
-        padding-bottom: 3%;
-    }
-
-    .contact-info-title {
-        padding-top: 3%;
-        padding-bottom: 8%;
-
-        text-align: center;
-    }
-
-    .contact-info {
-        margin: auto;
-    }
-
-    .contact-info-icons form {
-        padding: 7% 0 2%;
-        justify-content: center;
-    }
-
-    /* PARTE IN BASSO */
-    .input-row {
-        flex-direction: column;
-    }
-
-    .form-dati,
-    .form-email {
-        flex-basis: 45%;
-        margin-top: 5px;
-    }
-
-    .form-dati {
-        margin-bottom: 10px;
-    }
-
-    .input-row:last-child {
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-}
-
-@media screen and (max-width: 850px) {
-
-    .contact-container {
-        height: auto;
-    }
-
-    .contact-info-title h3 {
-        text-align: center;
-        padding-bottom: 3%;
-    }
-
-    .contact-info-title {
-        padding-top: 3%;
-        padding-bottom: 8%;
-
-        text-align: center;
-    }
-
-    .contact-info {
-        margin: auto;
-    }
-
-    .contact-info-icons form {
-        padding: 7% 0 2%;
-        justify-content: center;
-    }
-
-    .contact-info-icons form {
-        justify-content: center;
-    }
-
-    .input-row {
-        flex-direction: column;
-    }
-
-    .form-dati,
-    .form-email {
-        width: 85%;
-        margin-top: 5px;
-        margin-left: auto;
-        margin-right: auto;
-
-        flex-basis: 45%;
-
-    }
-
-    .form-dati {
-        margin-bottom: 10px;
-    }
-
-    .input-row:last-child {
-        margin-left: 25%;
-        margin-right: 25%;
-    }
-}
-
-
-
-
-
-/* MODIFICHE ASPETTO FORM */
-form input {
-    padding: 7px 20px;
-
-    border: none;
-    border-radius: 16px;
-}
-
-textarea {
-    width: 100%;
-    padding: 15px 25px;
-
-    border: none;
-    border-radius: 30px;
-}
-
-.button-size {
-    padding: 5px 15px;
-}
-
-
-/*-- -------------------------- -->
-<---          Contact           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    :root {
-        /* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
-        --primary: #008E87;
-        --primaryLight: #8EFFF9;
-        --secondary: #FFBA43;
-        --secondaryLight: #FFBA43;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4E4B66;
-        --bodyTextColorWhite: #FAFBFC;
-        /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-        --bodyFontSize: 1rem;
-        /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-    }
-
-    #cs-contact-490 {
-        font-family: 'Roboto', 'Arial', sans-serif;
-        padding: var(--sectionPadding);
-    }
-
-    #cs-contact-490 .cs-container {
-        width: 100%;
-        /* changes to 1280px at desktop */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 3rem;
-    }
-
-    #cs-contact-490 .cs-content {
-        max-width: 32.625rem;
-        text-align: left;
-    }
-
-    #cs-contact-490 .cs-topper {
-        font-size: var(--topperFontSize);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        text-align: inherit;
-        letter-spacing: .1em;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 0.25rem;
-        display: block;
-    }
-
-    #cs-contact-490 .cs-title {
-        font-size: var(--headerFontSize);
-        font-weight: 900;
-        line-height: 1.2em;
-        text-align: inherit;
-        max-width: 43.75rem;
-        margin: 0 0 1rem 0;
-        color: var(--headerColor);
-        position: relative;
-    }
-
-    #cs-contact-490 .cs-text {
-        font-size: var(--bodyFontSize);
-        line-height: 1.5em;
-        text-align: inherit;
-        width: 100%;
-        max-width: 40.625rem;
-        margin: 0;
-        color: var(--bodyTextColor);
-    }
-
-    #cs-contact-490 .cs-text {
-        /* 16px - 48px */
-        margin: 0 0 clamp(1rem, 4.4vw, 3rem) 0;
-    }
-
-    #cs-contact-490 .cs-header {
-        /* 13px - 16px */
-        font-size: clamp(0.8125rem, 1.5vw, 1rem);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        font-weight: 700;
-        letter-spacing: .1em;
-        margin: 0 0 1rem 0;
-        color: #B4B2C7;
-        display: block;
-    }
-
-    #cs-contact-490 .cs-link {
-        /* 16px - 20px */
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        text-decoration: none;
-        line-height: 1.5em;
-        font-weight: 700;
-        /* 16px - 32px */
-        margin: 0 0 clamp(1rem, 2.5vw, 2rem);
-        color: var(--headerColor);
-        display: block;
-    }
-
-    #cs-contact-490 .cs-link:hover {
-        text-decoration: underline;
-    }
-
-    #cs-contact-490 .cs-link:last-of-type {
-        margin-bottom: 0;
-    }
-
-    #cs-contact-490 .cs-social {
-        /* 32px - 80px */
-        margin-top: clamp(2rem, 6vw, 5rem);
-        display: inline-flex;
-        justify-content: flex-start;
-        gap: 0.75em;
-    }
-
-    #cs-contact-490 .cs-social-link {
-        /* 32px - 52px */
-        width: clamp(2rem, 4vw, 3.25rem);
-        height: clamp(2rem, 4vw, 3.25rem);
-        background-color: #4E4B66;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        z-index: 1;
-        transition: transform 0.3s, background-color 0.3s;
-    }
-
-    #cs-contact-490 .cs-social-link:hover {
-        background-color: var(--primary);
-        transform: translateY(-0.1875rem);
-    }
-
-    #cs-contact-490 .cs-social-img {
-        /* 14px - 24px */
-        height: clamp(0.875rem, 2vw, 1.5rem);
-        width: auto;
-        display: block;
-    }
-
-    #cs-contact-490 #cs-form-490 {
-        width: 100%;
-        max-width: 40.625rem;
-        /* 32px - 40px */
-        margin-bottom: clamp(2rem, 5.3vw, 2.5rem);
-        /* 20px - 40px */
-        padding: clamp(1.25rem, 4.5vw, 2.5rem);
-        /* prevents padding from affecting width and height */
-        box-sizing: border-box;
-        border: 1px solid #DAD9E3;
-        border-radius: 1rem;
-    }
-
-    #cs-contact-490 #cs-form-490 label {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.3vw, 1rem);
-        line-height: 1.5em;
-        font-weight: 700;
-        /* 16px - 20px */
-        margin-bottom: clamp(1rem, 1em, 1.25rem);
-        color: var(--headerColor);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    #cs-contact-490 #cs-form-490 .cs-label-message {
-        /* 32px - 40px */
-        margin-bottom: clamp(2rem, 4.5vw, 2.5rem);
-    }
-
-    #cs-contact-490 #cs-form-490 input,
-    #cs-contact-490 #cs-form-490 textarea {
-        font-size: 1rem;
-        width: 100%;
-        height: 4rem;
-        margin-top: 0.25rem;
-        padding-left: 1.25rem;
-        /* set transparent border so on hover border doesn't make it glitch */
-        border: 1px solid transparent;
-        border-bottom: 1px solid #B4B2C7;
-        /* prevents border & padding from affecting height */
-        box-sizing: border-box;
-        transition: border .3s;
-    }
-
-    #cs-contact-490 #cs-form-490 input:hover,
-    #cs-contact-490 #cs-form-490 textarea:hover {
-        border: 1px solid var(--primary);
-    }
-
-    #cs-contact-490 #cs-form-490 input::placeholder,
-    #cs-contact-490 #cs-form-490 textarea::placeholder {
-        color: #7D799C;
-    }
-
-    #cs-contact-490 #cs-form-490 textarea {
-        font-family: inherit;
-        margin: 0;
-        padding-top: 1.25rem;
-        min-height: 7.5rem;
-    }
-
-    #cs-contact-490 .cs-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875em, 5.5vw, 3.5em);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: auto;
-        width: 100%;
-        color: #fff;
-        padding: 0 1.5rem;
-        background-color: var(--primary);
-        border: none;
-        border-radius: 0.5rem;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-    }
-
-    #cs-contact-490 .cs-button-solid:before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: 0.5rem;
-        transition: width .3s;
-    }
-
-    #cs-contact-490 .cs-button-solid:hover {
-        cursor: pointer;
-    }
-
-    #cs-contact-490 .cs-button-solid:hover:before {
-        width: 100%;
-    }
-}
-
-/* Tablet - 700px */
-@media only screen and (min-width: 43.75rem) {
-    #cs-contact-490 .cs-container {
-        max-width: 80rem;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    #cs-contact-490 .cs-content {
-        width: 40%;
-        /* pushes it to the right */
-        order: 2;
-        flex: none;
-    }
-
-    #cs-contact-490 #cs-form-490 {
-        margin: 0;
-    }
-}
-
-
-/* Contact 2 */
-
-/*-- -------------------------- -->
-<---          Contact           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    :root {
-        /* remove this whole :root and put in your global css file that's shared on all pages, then just remove this section from all other Stitches you add later, only need this once in your global stylesheet */
-        --primary: #008079;
-        --primaryLight: #4db0ab;
-        --secondary: #D98900;
-        --secondaryLight: #FFBA43;
-        --headerColor: #1a1a1a;
-        --bodyTextColor: #4E4B66;
-        --bodyTextColorWhite: #FAFBFC;
-        /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-        --bodyFontSize: 1rem;
-        /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-    }
-
-    #contact-569 {
-        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: 'Roboto', 'Arial', sans-serif;
-        padding: var(--sectionPadding);
-        background-color: #FAFBFC;
-        position: relative;
-        z-index: 1;
-    }
-
-    #contact-569 .cs-container {
-        width: 100%;
-        /* changes to 1064px at desktop */
-        max-width: 34.375rem;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    #contact-569 .cs-left {
-        max-width: 39.375rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3rem;
-    }
-
-    #contact-569 .cs-content {
-        /* set text aling to left if content needs to be left aligned */
-        text-align: left;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
-    }
-
-    #contact-569 .cs-topper {
-        font-size: var(--topperFontSize);
-        line-height: 1.2em;
-        text-transform: uppercase;
-        text-align: inherit;
-        letter-spacing: .1em;
-        font-weight: 700;
-        color: var(--headerColor);
-        margin-bottom: 0.25rem;
-        display: block;
-    }
-
-    #contact-569 .cs-title {
-        font-size: var(--headerFontSize);
-        font-weight: 900;
-        line-height: 1.2em;
-        text-align: inherit;
-        /* changes to 522px on desktop */
-        max-width: 23.875rem;
-        margin: 0 0 1rem 0;
-        color: var(--headerColor);
-        position: relative;
-    }
-
-    #contact-569 .cs-text {
-        font-size: var(--bodyFontSize);
-        line-height: 1.5rem;
-        text-align: inherit;
-        width: 100%;
-        max-width: 26.25rem;
-        margin: 0;
-        color: var(--bodyTextColor);
-    }
-
-    #contact-569 .cs-form {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    #contact-569 .cs-label {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.5vw, 1rem);
-        width: 100%;
-        color: var(--headerColor);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 0.25rem;
-    }
-
-    #contact-569 .cs-input {
-        font-size: 1rem;
-        width: 100%;
-        height: 2.5rem;
-        padding: 0;
-        padding-left: 1.5rem;
-        color: var(--headerColor);
-        background-color: #fff;
-        border: 1px solid #E0E0E0;
-        /* prevents padding from adding to height and width */
-        box-sizing: border-box;
-        transition: border-color 0.3s;
-    }
-
-    #contact-569 .cs-input:hover {
-        border-color: var(--secondary);
-    }
-
-    #contact-569 .cs-input:focus {
-        outline: 1px solid var(--secondary);
-    }
-
-    #contact-569 .cs-input::placeholder {
-        color: #7D799C;
-        opacity: .6;
-        font-size: 0.875rem;
-    }
-
-    #contact-569 .cs-textarea {
-        /* 120px - 140px */
-        min-height: clamp(7.5rem, 28vw, 8.75rem);
-        padding-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        font-family: inherit;
-    }
-
-    #contact-569 .cs-submit {
-        /* 20px - 25px */
-        font-size: clamp(1.25rem, 2.6vw, 1.5625rem);
-        /* 56px - 70px */
-        line-height: clamp(3.5rem, 7vw, 4.375rem);
-        text-decoration: none;
-        font-weight: 700;
-        text-align: center;
-        margin: 0;
-        color: #1a1a1a;
-        border: none;
-        width: 100%;
-        padding: 0 1.5rem;
-        background-color: var(--secondary);
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        transition: color .3s;
-    }
-
-    #contact-569 .cs-submit:before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width .3s;
-    }
-
-    #contact-569 .cs-submit:hover {
-        color: #fff;
-        cursor: pointer;
-    }
-
-    #contact-569 .cs-submit:hover:before {
-        width: 100%;
-    }
-
-    #contact-569 .cs-right {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        row-gap: 3rem;
-    }
-
-    #contact-569 .cs-flex {
-        /* resets to 100% at desktop */
-        width: 49%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    #contact-569 .cs-header {
-        /* 20px - 25px */
-        font-size: clamp(1.25rem, 5vw, 1.5625rem);
-        line-height: 1.2em;
-        font-weight: 700;
-        margin: 0;
-        color: var(--headerColor);
-        display: block;
-    }
-
-    #contact-569 .cs-link {
-        /* 14px - 16px */
-        font-size: clamp(0.875rem, 1.4vw, 1rem);
-        line-height: 1.5em;
-        text-decoration: none;
-        margin: 0;
-        color: var(--headerColor);
-        display: block;
-    }
-
-    #contact-569 .cs-link:hover {
-        text-decoration: underline;
-    }
-
-    #contact-569 .cs-phone {
-        /* scoot it 8px up to override the 16px gap on the parent and make it 8px */
-        margin-top: -0.5rem;
-    }
-
-    #contact-569 .cs-social {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        /* 24px - 30px */
-        gap: clamp(1.5rem, 3vw, 1.875rem);
-    }
-
-    #contact-569 .cs-li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #contact-569 .cs-social-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        border: 1px solid var(--secondary);
-        border-radius: 50%;
-        transition: background-color 0.3s, transform 0.3s;
-    }
-
-    #contact-569 .cs-social-link:hover {
-        background-color: var(--secondary);
-        transform: translateY(-0.25rem);
-    }
-
-    #contact-569 .cs-social-link:hover .cs-icon {
-        /* turn icon white */
-        filter: grayscale(1) brightness(1000%);
-    }
-
-    #contact-569 .cs-icon {
-        width: auto;
-        height: 0.9375rem;
-    }
-}
-
-/* Tablet - 650px */
-@media only screen and (min-width: 40.625rem) {
-    #contact-569 .cs-label {
-        width: 48.4%;
-    }
-
-    #contact-569 .cs-message {
-        width: 100%;
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #contact-569 .cs-container {
-        max-width: 66.5rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    #contact-569 .cs-left {
-        width: 60%;
-    }
-
-    #contact-569 .cs-submit {
-        width: 15rem;
-    }
-
-    #contact-569 .cs-right {
-        width: 19rem;
-        flex-direction: column;
-        /* prevent flexbox from squishing it */
-        flex: none;
-    }
-
-    #contact-569 .cs-flex {
-        width: 100%;
-    }
-
-    #contact-569 .cs-social {
-        /* adds an extra 16px + 48px row gap on the parent to make 64px space between */
-        margin-top: 1rem;
-    }
+.product-price-btn button:hover {
+    background-color: #79b0a1;
 }
