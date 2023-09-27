@@ -646,18 +646,19 @@
         <img src="/assets/img/icons/paper-plane-svgrepo-com.svg" alt="mail paperplane" class="paperplane">
 
         <div class="wrap-contact100">
-            <form class="contact100-form validate-form">
+            <form action="https://formsubmit.co/andredema94@hotmail.it" method="POST"
+                class="contact100-form validate-form">
                 <span class="contact100-form-title">
                     mettiti in contatto <br>
                     con Andreja Restek
 
                 </span>
                 <div class="wrap-input100 validate-input alert-validate" data-validate="Please enter your name">
-                    <input class="input100" type="text" name="name" placeholder="Nome Cognome">
+                    <input class="input100" type="text" name="name" placeholder="Nome Cognome" required>
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input alert-validate" data-validate="Please enter your email: e@a.x">
-                    <input class="input100" type="text" name="email" placeholder="E-mail">
+                    <input class="input100" type="text" name="email" placeholder="E-mail" required>
                     <span class="focus-input100"></span>
                 </div>
                 <div class="wrap-input100 validate-input alert-validate" data-validate="Inserisci un oggetto">
@@ -671,11 +672,14 @@
                     <span class="focus-input100"></span>
                 </div>
                 <div class="container-contact100-form-btn">
-                    <button class="my-button button-style">
+                    <button type="submit" class="my-button button-style">
                         <div class="button-bg"></div>
                         <span>&nbsp;&nbsp;Invia&nbsp;&nbsp;</span>
                     </button>
                 </div>
+                <input type="hidden" name="_next" value="https://andrejarestek.com/">
+                <input type="hidden" name="_captcha" value="false">
+
             </form>
         </div>
     </div>
