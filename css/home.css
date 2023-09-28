@@ -86,7 +86,7 @@ body {
         height: 100svh;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position-y: 8vh;
+        background-position-y: 2vh;
         background-color: var(--my-black);
     }
 }
@@ -1322,9 +1322,9 @@ lottie-player {
 /* ------- 3 ABOUT CARDS PER RIMANDARE ALLA PAGINA ABOUT ME ------- */
 
 .section-about {
-    background-color: var(--my-black);
+    /* background-color: var(--my-black); */
+    background-color: #ccc;
     color: black;
-
     position: relative;
     z-index: 1;
 
@@ -1341,7 +1341,8 @@ lottie-player {
 
 
 .section-about header {
-    color: var(--white-background);
+    /* color: var(--white-background); */
+    color: #2f2f2f;
     margin-bottom: 2%;
     padding-top: 2%;
 
