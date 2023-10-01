@@ -636,6 +636,7 @@ lottie-player {
 
     .section-about-text {
         padding: 5% 0;
+        padding-bottom: 9%;
     }
 
     .video-wrapper {
@@ -1332,8 +1333,8 @@ lottie-player {
     width: 100%;
 
     padding: 1%;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding-top: 4%;
+    padding-bottom: 9%;
 
     display: flex;
     flex-wrap: wrap;
@@ -1378,7 +1379,7 @@ lottie-player {
 @media screen and (max-width:850px) {
 
     .section-about header {
-        padding-top: 8%;
+        padding-top: 5%;
     }
 }
 
@@ -1822,7 +1823,7 @@ lottie-player {
 .gallery-image {
     height: 100%;
 
-    background-image: url(/assets/img/FOTO/COVID19/covid-bw-min.JPG);
+    background-image: url(/assets/img/home/fucili-min.webp);
     background-size: cover;
     background-position: center;
 
@@ -2773,6 +2774,35 @@ textarea.input100 {
 
 .custom-shape-divider-top-1695726880 .shape-fill {
     fill: #E2E2E2;
+}
+
+
+.custom-shape-divider-top-1696149800 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1696149800 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 22px;
+}
+
+.custom-shape-divider-top-1696149800 .shape-fill {
+    fill: #FEFCFB;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1696149800 svg {
+        width: calc(197% + 1.3px);
+        height: 22px;
+    }
 }
 
 /* TABLET */
