@@ -1561,6 +1561,14 @@ lottie-player {
     overflow: hidden;
 }
 
+@media screen and (max-width:450px) {
+
+    .mcard {
+        margin: 2% 3%;
+    }
+
+}
+
 .mcard:hover .card-image {
     filter: contrast(100%);
 }
@@ -1817,13 +1825,12 @@ lottie-player {
         margin-top: 6%;
 
     }
-
 }
 
 .gallery-image {
     height: 100%;
 
-    background-image: url(/assets/img/home/fucili-min.webp);
+    background-image: url(/assets/img/FOTO/ETIOPIA/etiopia-13.webp);
     background-size: cover;
     background-position: center;
 
