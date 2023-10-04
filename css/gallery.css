@@ -120,7 +120,7 @@ body {
 .hero-gallery {
     height: 100vh;
 
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7217480742296919) 7%, rgba(0, 0, 0, 0.6125043767507004) 31%, rgba(0, 0, 0, 0.41082370448179273) 58%, rgba(0, 0, 0, 0.1643251050420168) 91%), url(/assets/img/FOTO/ETIOPIA/33\ ETIOPIA-min.JPG);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7217480742296919) 7%, rgba(0, 0, 0, 0.6125043767507004) 31%, rgba(0, 0, 0, 0.41082370448179273) 58%, rgba(0, 0, 0, 0.1643251050420168) 91%), url(/assets/img/FOTO/ETIOPIA/etiopia-bg-min.webp);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -134,6 +134,15 @@ body {
 
     animation: mix-hero-anim 3s cubic-bezier(0.29, 0.8, 0.8, 1);
     will-change: clip-path;
+}
+
+@media screen and (max-width:500px) {
+
+    .hero-gallery {
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7217480742296919) 7%, rgba(0, 0, 0, 0.6125043767507004) 31%, rgba(0, 0, 0, 0.41082370448179273) 58%, rgba(0, 0, 0, 0.1643251050420168) 91%),
+            url(/assets/img/FOTO/ETIOPIA/etiopia-bg-mobile.webp);
+    }
+
 }
 
 @keyframes mix-hero-anim {
