@@ -48,7 +48,7 @@ function handleScroll() {
   }
 
   if (isInViewport(award3)) {
-    animateNumber(document.getElementById("nbr3"), 5000, 3000); // 3000ms duration for nbr3 (slower)
+    animateNumber(document.getElementById("nbr3"), 50000, 3000); // 3000ms duration for nbr3 (slower)
   }
 }
 
