@@ -74,3 +74,8 @@ body {
     aspect-ratio: 3/2;
     object-fit: cover;
 }
+
+.rifugiati-gallery {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
